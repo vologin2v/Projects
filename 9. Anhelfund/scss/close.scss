@@ -1,0 +1,16 @@
+.close__body {
+	width: fit-content;
+	margin: 50px auto;
+	text-align: center;
+
+	h2 {
+		@include text(24px, 300, $black);
+		margin-bottom: 0;
+	}
+	h3 {
+		@include text(14px, 300, $black);
+		margin-bottom: 20px;
+	}
+}
+.close__buttons {
+}

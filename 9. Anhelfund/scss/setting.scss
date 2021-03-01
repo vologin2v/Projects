@@ -1,0 +1,91 @@
+//Мискины
+@mixin text($s, $w, $c) {
+	font-family: "Roboto";
+	font-size: $s;
+	font-weight: $w;
+	color: $c;
+}
+
+//Colors
+$black: #000;
+$white: #fff;
+$dblue: #040607;
+$lblue: #eff8fd;
+
+html {
+	background-color: #fff;
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #fff;
+	max-width: 1440px;
+	margin: 0 auto;
+	position: relative;
+	overflow-x: hidden;
+}
+.content {
+	margin: 0 auto;
+	@media screen and (min-width: 830px) {
+		width: 830px;
+	}
+	@media screen and (min-width: 700px) {
+		width: 700px;
+	}
+	@media screen and (max-width: 700px) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
+.content-two,
+.content-three,
+.content-four {
+	padding: 60px 0;
+	@media screen and (min-width: 830px) {
+		padding: 100px 0;
+	}
+}
+/* хром, сафари */
+.modal::-webkit-scrollbar {
+	width: 0;
+}
+
+/* ie 10+ */
+.modal {
+	-ms-overflow-style: none;
+}
+
+/* фф */
+.modal {
+	overflow: -moz-scrollbars-none;
+}
+.button_a {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+}
+
+//scroll
+.modal__left_risk::-webkit-scrollbar {
+	width: 15px;
+}
+.modal__left_risk::-webkit-scrollbar-thumb {
+	background: #959595;
+	border-radius: 8px;
+	border: 3px solid $lblue;
+}
+.hide {
+	display: none !important;
+}
+.hide-mb {
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+}
+.hide-pc {
+	@media screen and (min-width: 700px) {
+		display: none;
+	}
+}
+.player {
+	margin-bottom: 30px;
+}

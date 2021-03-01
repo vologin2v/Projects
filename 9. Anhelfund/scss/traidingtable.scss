@@ -1,0 +1,192 @@
+.page {
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		@media screen and (min-width: 700px) {
+			flex-direction: row;
+			margin-top: 50px;
+		}
+	}
+	&__clock {
+		text-align: left;
+		@media screen and (min-width: 700px) {
+			text-align: right;
+		}
+		p {
+			margin: 0;
+			@include text(24px, 400, $black);
+			@media screen and (min-width: 700px) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.tdt__title {
+	margin: 0 0 20px !important;
+}
+.tutorial {
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+	}
+	&__item {
+		display: inherit;
+		align-items: center;
+		flex-direction: row;
+		margin-right: 15px;
+		margin-bottom: 10px;
+		p {
+			margin: 0;
+			@include text(18px, 400, $black);
+			@media screen and (min-width: 700px) {
+				font-size: 14px;
+			}
+		}
+	}
+	&__block {
+		width: 30px;
+		height: 15px;
+		border-radius: 3px;
+		margin-right: 4px;
+
+		&_g {
+			background-color: #b8ffc7;
+		}
+		&_r {
+			background-color: #ffcaca;
+		}
+		&_gr {
+			background-color: #a8a8a8;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 11px;
+			}
+		}
+	}
+}
+.table__wrap {
+	@media screen and (max-width: 700px) {
+		overflow-x: scroll;
+	}
+}
+.tdt__table {
+	@media screen and (max-width: 700px) {
+		width: 800px;
+	}
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	th {
+		@include text(10px, 500, $black);
+		@media screen and (min-width: 700px) {
+			font-size: 11px;
+		}
+	}
+	tr {
+		&:first-child {
+			height: 40px;
+		}
+		&:nth-child(even) {
+			background-color: #fff;
+			background-color: rgba(4, 116, 198, 0.08);
+		}
+		&:not(:first-child) {
+			height: 40px;
+		}
+		td:nth-child(-n + 2) {
+			@include text(14px, 500, $black);
+		}
+	}
+}
+.cell {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//background-color: red;
+}
+.signal {
+	width: 95%;
+	height: 33px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	@media screen and (min-width: 700px) {
+		width: 95%;
+	}
+	@media screen and (min-width: 830px) {
+		//width: 90%;
+	}
+	&__long {
+		background-color: #b8ffc7;
+		svg {
+			fill: #24ff00;
+		}
+	}
+	&__short {
+		background-color: #ffcaca;
+		svg {
+			transform: rotate(180deg);
+			fill: red;
+		}
+	}
+	&__canceled {
+		background-color: #a8a8a8;
+		svg {
+			display: none;
+		}
+	}
+	&__none {
+		display: none;
+	}
+	&__body {
+		width: 90%;
+		margin: 0 auto;
+	}
+	&__value {
+		text-align: left;
+		@include text(13px, 500, $black);
+		margin: 0;
+	}
+	&__row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		p {
+			margin: 0;
+			@include text(12px, 400, $black);
+		}
+	}
+	&__arrow {
+		width: 15px;
+		height: 9px;
+	}
+}
+.tdt__line {
+	margin-top: 10px;
+	height: 1px;
+	width: 370px;
+	background-color: #000;
+	opacity: 0.3;
+}
+.tdt__article {
+	@include text(18px, 400, $black);
+	line-height: 150%;
+	margin-bottom: 40px;
+	@media screen and (min-width: 700px) {
+		font-size: 11px;
+		max-width: 495px;
+	}
+}
+.tdt__btn {
+	margin-bottom: 40px;
+}

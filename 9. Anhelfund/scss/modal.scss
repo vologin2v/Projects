@@ -1,0 +1,408 @@
+// #modal-risk,
+// #modal-callback,
+// #modal-policy,
+// #modal-training {
+// 	display: none;
+// }
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	&__close {
+		@media screen and (max-width: 700px) {
+			width: 40px;
+			top: -50px;
+		}
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: -30px;
+		@media screen and (min-width: 830px) {
+			top: 0;
+			right: -30px;
+		}
+	}
+	&__body {
+		position: relative;
+		@media screen and (max-width: 700px) {
+			margin: 0 32px;
+		}
+		height: inherit;
+		// width: inherit;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+	}
+	&__wrapper {
+		position: absolute;
+		@media screen and (max-width: 700px) {
+			margin-bottom: 60px;
+			border-radius: 10px;
+			top: 85px;
+			padding-bottom: 20px;
+		}
+		@media screen and (min-width: 700px) {
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		background-color: $lblue;
+		&_small {
+			@media screen and (min-width: 700px) {
+				height: 335px;
+			}
+		}
+		&_wide {
+			@media screen and (min-width: 700px) {
+				margin-bottom: 30px;
+				top: 100px;
+				box-sizing: border-box;
+			}
+		}
+		&_padding {
+			padding: 20px 30px;
+		}
+	}
+	&__content {
+		&_small {
+			display: grid;
+			@media screen and (min-width: 700px) {
+				grid-template-columns: 476px 223px;
+				grid-template-rows: 335px;
+			}
+			@media screen and (min-width: 830px) {
+				grid-template-columns: 565px 265px;
+			}
+		}
+	}
+	&__left {
+		box-sizing: border-box;
+
+		&_risk {
+			padding-top: 30px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+
+			padding-bottom: 30px;
+			@media screen and (min-width: 700px) {
+				height: 335px;
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+		&_form {
+			padding-top: 20px;
+			@media screen and (min-width: 700px) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+	}
+	&__img {
+		background-size: auto 100%;
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+		img {
+			width: 100%;
+		}
+		&_risk {
+			background-image: url(../img/risk-img.png);
+		}
+		&_callback {
+			background-image: url(../img/callback-img.jpg);
+		}
+	}
+}
+.input_color_modal {
+	background-color: $white;
+	color: $black;
+	border: 1px solid #a9a9a9;
+	&::placeholder {
+		@include text(24px, 300, $black);
+		@media screen and (min-width: 700px) {
+			@include text(14px, 300, $black);
+		}
+	}
+	&:focus {
+		outline: 1px solid rgba(0, 0, 0, 0.5);
+	}
+}
+.modal__title {
+	@include text(36px, 400, $black);
+}
+.modal__subtitle {
+	@include text(30px, 400, $black);
+	@media screen and (min-width: 700px) {
+		@include text(24px, 400, $black);
+	}
+}
+.modal__p {
+	@include text(24px, 400, $black);
+	text-align: justify;
+	@media screen and (min-width: 700px) {
+		@include text(14px, 400, $black);
+		line-height: 20px;
+	}
+}
+
+.training__img {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-image: url(../img/training-img.jpg);
+	background-size: cover;
+	//	box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
+	h2 {
+		@include text(36px, 900, $white);
+	}
+}
+
+.training__text,
+.training__end {
+	@media screen and (max-width: 700px) {
+		padding-left: 32px !important;
+		padding-right: 32px !important;
+	}
+	@media screen and (min-width: 700px) {
+		padding: 0 30px;
+	}
+	@media screen and (min-width: 830px) {
+		padding: 0 40px;
+	}
+}
+#training-close {
+	@media screen and (min-width: 830px) {
+		top: 10px !important;
+	}
+}
+.training__p {
+	text-align: justify;
+	margin: 20px 0;
+	@include text(24px, 400, $black);
+	@media screen and (min-width: 700px) {
+		@include text(17px, 300, $black);
+		line-height: 22px;
+	}
+}
+.big {
+	margin: 40px 0;
+	border-left: 1px solid $dblue;
+	padding: 10px 0 10px 20px;
+	&__text {
+		@include text(24px, 700, $black);
+		margin: 0;
+	}
+}
+.speech {
+	margin: 40px 0;
+	background-color: $dblue;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-shadow: 10px 10px 23px rgba(0, 0, 0, 0.5);
+	padding: 24px 30px;
+	@media screen and (min-width: 700px) {
+		height: 350px;
+	}
+
+	& img {
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+		@media screen and (min-width: 700px) {
+			max-width: 230px;
+			margin-right: 35px;
+		}
+		@media screen and (min-width: 830px) {
+			margin-right: 55px;
+		}
+	}
+	&__p {
+		line-height: 27px;
+		@include text(14px, 300, $white);
+		@media screen and (max-width: 700px) {
+			@include text(18px, 300, $white);
+		}
+		font-style: italic;
+		// &:last-child {
+		// 	@media screen and (min-width: 700px) {
+		// 		margin-bottom: 60px;
+		// 	}
+		// }
+	}
+}
+
+.training__end {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.training__signature {
+	margin-left: auto;
+}
+.training__button {
+	width: 150px;
+	height: 36px;
+	@media screen and (max-width: 700px) {
+		font-size: 24px;
+		width: 250px;
+		height: 80px;
+	}
+
+	&_full-black {
+		background-color: $dblue;
+		border: none;
+		@include text(18px, 400, $white);
+		margin-right: 15px;
+	}
+	&_black {
+		@media screen and (max-width: 700px) {
+			display: none;
+			width: 200px;
+			height: 80px;
+		}
+		background-color: rgba(0, 0, 0, 0);
+		@include text(18px, 400, $dblue);
+		border: 1px solid $dblue;
+	}
+}
+.training__end {
+	@media screen and (min-width: 700px) {
+		padding: 0 30px;
+	}
+	@media screen and (min-width: 830px) {
+		padding: 30px 40px;
+	}
+}
+.btn-policy {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.click-here {
+	color: #0000ff;
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.mobile {
+	position: relative;
+	margin: 0 !important;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	&__close {
+		position: absolute;
+		right: 32px !important;
+		top: 35px !important;
+		&:focus {
+			outline: none;
+		}
+	}
+	&__link {
+		@include text(48px, 700, $white);
+		text-decoration: none;
+	}
+	&__line {
+		margin: 20px auto;
+		width: 200px;
+		height: 1px;
+		background-color: $white;
+	}
+}
+.accordeon {
+	transition: all 0.2s ease;
+	&__trigger {
+		cursor: pointer;
+		transition: all 0.5s ease;
+		background-color: $white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 700px) {
+			padding: 0 32px;
+		}
+		@media screen and (min-width: 700px) {
+			padding: 0 30px;
+		}
+		@media screen and (min-width: 830px) {
+			padding: 0 40px;
+		}
+	}
+	&__title {
+		font-family: "Roboto";
+		font-weight: 700;
+	}
+	&__wrapper {
+		display: none;
+	}
+	&__arrow {
+		transform: rotate(0);
+		width: 30px;
+		transition: all 0.2s ease;
+	}
+	&__content {
+		padding: 50px 0;
+		background-color: $dblue;
+		display: flex;
+		justify-content: center;
+	}
+	&__grid {
+		display: grid;
+		margin: 0 auto;
+		grid-gap: 40px;
+		@media screen and (min-width: 700px) {
+			grid-template-columns: repeat(3, 190px);
+			grid-template-rows: repeat(3, 190px);
+			grid-gap: 20px;
+		}
+		@media screen and (min-width: 830px) {
+			grid-template-columns: repeat(3, 230px);
+			grid-template-rows: repeat(3, 200px);
+			grid-gap: 30px;
+		}
+	}
+	&__item {
+		text-align: center;
+		& img {
+			@media screen and (max-width: 700px) {
+				width: 150px;
+				margin-bottom: 30px;
+			}
+		}
+		& h4 {
+			@media screen and (max-width: 700px) {
+				@include text(24px, 300, $white);
+				margin: 0 auto;
+				line-height: 35px;
+				width: 80%;
+			}
+			@include text(14px, 300, $white);
+			line-height: 20px;
+		}
+	}
+	&_active {
+		transition: all 0.5s ease;
+		background-color: $dblue;
+		& .accordeon__title {
+			transition: all 0.5s ease;
+			color: $white;
+		}
+	}
+}

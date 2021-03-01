@@ -1,0 +1,620 @@
+//One
+.one {
+	@media screen and (min-width: 830px) {
+		height: 520px;
+	}
+	@media screen and (min-width: 700px) {
+		height: 340px;
+	}
+	background-image: url(../img/one-bg.jpg);
+	background-size: cover;
+	box-shadow: 0 10px 40px $black;
+	position: relative;
+	z-index: 2;
+	&__offer {
+		@media screen and (min-width: 830px) {
+			margin-top: 140px;
+		}
+		@media screen and (min-width: 700px) {
+			margin-top: 70px;
+		}
+		margin-top: 215px;
+	}
+	&__title {
+		@media screen and (max-width: 700px) {
+			margin-bottom: 20px;
+		}
+	}
+	&__span {
+		text-transform: initial;
+		@media screen and (min-width: 700px) {
+			@include text(24px, 400, $white);
+		}
+		@include text(24px, 400, $white);
+		letter-spacing: 0;
+	}
+	&__subtitle {
+		@media screen and (min-width: 830px) {
+			@include text(14px, 400, $white);
+		}
+		@media screen and (min-width: 700px) {
+			@include text(12px, 400, $white);
+		}
+		@include text(18px, 400, $white);
+		margin: 0;
+		line-height: 150%;
+	}
+	&__button {
+		margin-top: 33px;
+
+		@media screen and (min-width: 830px) {
+			margin-top: 30px;
+		}
+		@media screen and (min-width: 700px) {
+			margin-top: 24px;
+			@include text(18px, 400, $black);
+			height: 40px;
+			width: 150px;
+		}
+		&:hover {
+			box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.65);
+		}
+	}
+}
+.content-one {
+	@media screen and (min-width: 830px) {
+		padding: 35px 0 0;
+	}
+	@media screen and (min-width: 700px) {
+		padding: 15px 0;
+	}
+	padding: 35px 0 145px;
+}
+.gradient {
+	width: inherit;
+	height: inherit;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.87) 10%, rgba(0, 0, 0, 0));
+}
+.header {
+	&__logo {
+		width: 180px;
+		& img {
+			width: inherit;
+		}
+	}
+}
+.span_title {
+	@media screen and (min-width: 830px) {
+		@include text(48px, 900, $white);
+	}
+	@media screen and (min-width: 700px) {
+		@include text(36px, 900, $white);
+		line-height: 70%;
+	}
+	@include text(64px, 900, $white);
+	letter-spacing: 2px;
+	line-height: 100%;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+//Sentense
+.sentence {
+	background-image: url(../img/sentense-bg.jpg);
+	padding: 110px 0;
+	&__title {
+		margin: 0 auto 50px;
+		width: 480px;
+		display: flex;
+		align-items: center;
+		h2 {
+			@include text(36px, 700, $white);
+			margin: 0 10px 3px 0;
+		}
+	}
+	&__features {
+		display: flex;
+		width: 560px;
+		margin: 0 auto 60px;
+		justify-content: space-between;
+	}
+	&__item {
+		position: relative;
+		img {
+			position: absolute;
+			top: -4px;
+			left: -20px;
+		}
+		h3 {
+			@include text(13px, 400, $white);
+		}
+	}
+	&__buttons {
+		margin: 0 auto;
+		width: fit-content;
+		a:nth-child(1) {
+			margin-right: 10px;
+		}
+	}
+}
+//Two
+.two {
+	background-color: $dblue;
+}
+.content-two {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 650px;
+	@media screen and (min-width: 700px) {
+		padding: 40px 0;
+		grid-template-columns: 460px 220px;
+		grid-template-rows: 340px;
+		grid-column-gap: 20px;
+	}
+	@media screen and (min-width: 830px) {
+		grid-template-columns: 500px 300px;
+		grid-template-rows: 440px;
+		grid-column-gap: 30px;
+	}
+
+	&__left {
+		position: relative;
+		@media screen and (min-width: 700px) {
+			border-left: 1px solid $white;
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
+		}
+	}
+	&__wrapper {
+		position: absolute;
+		background-color: $dblue;
+		@media screen and (min-width: 700px) {
+			width: 330px;
+			padding: 15px 0;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -1px;
+		}
+		@media screen and (min-width: 830px) {
+			width: 345px;
+			padding: 30px 0;
+			left: -25px;
+		}
+	}
+	&__text {
+		text-align: justify;
+		margin-top: 0;
+		margin-bottom: 50px;
+		@include text(24px, 400, $white);
+		@media screen and (min-width: 700px) {
+			margin-bottom: 16px;
+			@include text(12px, 400, $white);
+		}
+		@media screen and (min-width: 830px) {
+			margin-bottom: 11px;
+			@include text(14px, 400, $white);
+		}
+	}
+	&__buttons {
+		@media screen and (max-width: 700px) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+		margin-top: 30px;
+		a {
+			text-decoration: none;
+			@include text(24px, 400, $white);
+			@media screen and (min-width: 700px) {
+				@include text(13px, 400, $white);
+				margin-left: 10px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__button {
+		width: 277px;
+		height: 80px;
+		@include text(24px, 400, $white);
+		@media screen and (min-width: 700px) {
+			width: 110px;
+			height: 35px;
+			@include text(14px, 400, $white);
+		}
+	}
+	&__right {
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+}
+.two-name {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	bottom: 15px;
+	@media screen and (min-width: 700px) {
+		left: 8px;
+		bottom: 15px;
+	}
+	@media screen and (min-width: 830px) {
+		left: 15px;
+		bottom: 15px;
+	}
+	&__name {
+		margin: 0 0 4px;
+		@include text(36px, 400, $white);
+		@media screen and (min-width: 700px) {
+			@include text(18px, 400, $white);
+		}
+	}
+	&__regalia {
+		margin: 0 0 0;
+		@include text(24px, 400, $white);
+		@media screen and (min-width: 700px) {
+			@include text(12px, 400, $white);
+		}
+		@media screen and (min-width: 830px) {
+			@include text(13px, 400, $white);
+		}
+	}
+}
+//Three
+.three {
+	background-color: $lblue;
+}
+.content-three {
+	display: grid;
+	@media screen and (min-width: 700px) {
+		grid-template-columns: 314px 320px;
+		grid-column-gap: 30px;
+	}
+	@media screen and (min-width: 830px) {
+		grid-template-columns: 300px 480px;
+		grid-column-gap: 30px;
+	}
+	&__left {
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+		img {
+			width: 100%;
+			box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+		}
+	}
+	&__right {
+		@media screen and (min-width: 700px) {
+			position: relative;
+		}
+	}
+	&__title {
+		margin-top: 0;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		@include text(36px, 400, $black);
+		line-height: 45px;
+		@media screen and (min-width: 700px) {
+			margin-bottom: 20px;
+			line-height: 30px;
+			@include text(24px, 400, $black);
+		}
+		@media screen and (min-width: 830px) {
+			margin-bottom: 40px;
+		}
+	}
+	&__text {
+		margin-bottom: 20px;
+		@include text(24px, 300, $black);
+		@media screen and (min-width: 700px) {
+			@include text(14px, 300, $black);
+		}
+	}
+	&__btn {
+		margin-top: auto;
+		display: block;
+	}
+}
+
+//Four
+.four {
+	background-image: url(../img/four-bg.jpg);
+	background-size: cover;
+	&__wrapper {
+		border: 0.5px solid $white;
+		padding: 30px 0;
+		text-align: center;
+		@media screen and (min-width: 700px) {
+			text-align: left;
+			display: flex;
+			align-items: center;
+			position: absolute;
+			bottom: 0;
+			box-sizing: border-box;
+			width: 100%;
+			height: 240px;
+		}
+		@media screen and (min-width: 830px) {
+			height: 100%;
+		}
+	}
+	&__contacts {
+		@media screen and (min-width: 700px) {
+			margin-left: 25px;
+		}
+		@media screen and (min-width: 830px) {
+			margin-left: 45px;
+		}
+	}
+	&-name {
+		&__name {
+			margin-top: 0;
+			margin-bottom: 0;
+			@include text(36px, 400, $white);
+			@media screen and (min-width: 700px) {
+				@include text(18px, 400, $white);
+			}
+		}
+		&__regalia {
+			margin-top: 0;
+			margin-bottom: 20px;
+			@include text(24px, 400, $white);
+			@media screen and (min-width: 700px) {
+				@include text(13px, 400, $white);
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+.content-four {
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-row-gap: 30px;
+	@media screen and (min-width: 700px) {
+		grid-template-rows: 299px;
+		grid-template-columns: 220px 460px;
+		grid-column-gap: 20px;
+	}
+	@media screen and (min-width: 830px) {
+		grid-template-rows: 313px;
+		grid-template-columns: 300px 500px;
+		grid-column-gap: 30px;
+	}
+	&__title {
+		margin-top: 0;
+		margin-bottom: 10px;
+		@include text(48px, 400, $white);
+		@media screen and (min-width: 700px) {
+			@include text(24px, 400, $white);
+			margin-bottom: 0;
+		}
+		@media screen and (min-width: 830px) {
+			@include text(36px, 400, $white);
+		}
+		&_four {
+			@media screen and (min-width: 700px) {
+				@include text(24px, 400, $white);
+			}
+			@media screen and (min-width: 830px) {
+				@include text(36px, 400, $white);
+			}
+		}
+		&_modal {
+			@media screen and (max-width: 700px) {
+				margin-bottom: 0;
+			}
+			@include text(36px, 400, $black);
+			@media screen and (min-width: 700px) {
+				@include text(24px, 400, $black);
+			}
+			@media screen and (min-width: 830px) {
+				@include text(36px, 400, $black);
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 30px;
+		@media screen and (max-width: 700px) {
+			width: 70%;
+			margin: 0 0 25px;
+		}
+		@include text(24px, 300, $white);
+		@media screen and (min-width: 700px) {
+			@include text(14px, 400, $white);
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+		&_four {
+			@media screen and (min-width: 700px) {
+				@include text(14px, 400, $white);
+			}
+		}
+		&_modal {
+			@include text(24px, 400, $black);
+			@media screen and (min-width: 700px) {
+				@include text(14px, 400, $black);
+			}
+		}
+	}
+	&__left {
+		position: relative;
+		@media screen and (max-width: 700px) {
+			order: 2;
+		}
+	}
+	&__form {
+		display: grid;
+		grid-template-rows: repeat(3, 80px) 160px 110px 60px;
+		grid-row-gap: 15px;
+		@media screen and (min-width: 700px) {
+			grid-template-columns: 27.23% 13.94% 54.47%;
+
+			grid-row-gap: 10px;
+			grid-column-gap: 10px;
+		}
+		@media screen and (min-width: 830px) {
+			grid-template-columns: 25.05% 16.43% 54.51%;
+		}
+	}
+	&__rows_four {
+		@media screen and (min-width: 700px) {
+			grid-template-rows: repeat(2, 37px) 100px 37px;
+		}
+	}
+	&__rows_modal {
+		@media screen and (min-width: 700px) {
+			grid-template-rows: repeat(2, 32px) 100px 37px;
+		}
+		@media screen and (min-width: 830px) {
+			grid-template-rows: repeat(2, 32px) 85px 37px;
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		margin-bottom: 5px;
+		@include text(24px, 400, $white);
+		@media screen and (min-width: 700px) {
+			@include text(14px, 400, $white);
+		}
+		&:last-child {
+			margin-top: 20px;
+			@media screen and (min-width: 700px) {
+				margin-top: 30px;
+			}
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+@media screen and (min-width: 700px) {
+	.form-grid__item_1 {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	.form-grid__item_2 {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.form-grid__item_3 {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+	.form-grid__item_4 {
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	.form-grid__item_5 {
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	.form-grid__item_6 {
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+}
+
+.content-form {
+	&__form-input {
+		@media screen and (max-width: 700px) {
+			@include text(24px, 400, $black);
+		}
+		border-radius: 5px;
+		border: none;
+		padding: 9px;
+	}
+	&__button {
+		height: 80px;
+		width: 280px;
+		margin: auto;
+		@include text(24px, 300, $white);
+		@media screen and (min-width: 700px) {
+			@include text(14px, 400, $white);
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&__warning {
+		margin: auto 0;
+		text-align: center;
+		line-height: 26px;
+		@include text(24px, 300, $white);
+		@media screen and (min-width: 700px) {
+			text-align: left;
+			@include text(11px, 300, $white);
+			line-height: 15px;
+		}
+		& a {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+}
+.input_color_four {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: $white;
+	&::placeholder {
+		@include text(24px, 300, $white);
+		@media screen and (min-width: 700px) {
+			@include text(14px, 300, $white);
+		}
+	}
+	&:focus {
+		outline: 1px solid rgba(255, 255, 255, 0.5);
+	}
+}
+.content__footer {
+	display: flex;
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+	}
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+	}
+}
+.footer {
+	@media screen and (max-width: 700px) {
+		background-color: $black;
+		padding: 15px 0;
+		text-align: center;
+	}
+
+	&__item {
+		@include text(18px, 300, $white);
+		@media screen and (min-width: 700px) {
+			@include text(11px, 300, $white);
+		}
+		@media screen and (max-width: 700px) {
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&_2 {
+			margin-left: 5px;
+		}
+		&_3 {
+			@media screen and (max-width: 700px) {
+				margin-left: 0;
+			}
+			margin-left: auto;
+		}
+	}
+}

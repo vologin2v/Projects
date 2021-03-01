@@ -1,0 +1,241 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+@import "../css/normalize";
+@import "setting";
+@import "modal";
+@import "shame";
+@import "header";
+@import "footer";
+@import "index";
+@import "tradingsignals";
+@import "auth";
+@import "investor";
+@import "expcalendar";
+@import "404";
+@import "close";
+@import "library";
+@import "traidingtable";
+
+//Buttons
+// .button,
+// .btn-training {
+// 	cursor: pointer;
+// 	&:focus {
+// 		outline: none;
+// 	}
+// 	&_white {
+// 		background-color: rgba(0, 0, 0, 0);
+// 		border: 0.5px solid $white;
+// 		color: $white;
+// 		transition: all 0.2s ease;
+// 		&:hover {
+// 			background-color: rgba(255, 255, 255, 0.3);
+// 		}
+// 	}
+// 	&_two {
+// 		margin-top: 20px;
+// 		height: 80px;
+// 		width: 280px;
+// 		@include text(24px, 400, $black);
+// 		@media screen and (min-width: 700px) {
+// 			position: absolute;
+// 			bottom: 4px;
+// 			height: 35px;
+// 			width: 110px;
+// 			@include text(14px, 400, $black);
+// 		}
+// 	}
+// 	&_color {
+// 		&_black {
+// 			background-color: rgba(0, 0, 0, 0);
+// 			border: 0.5px solid $black;
+// 			@include text(24px, 400, $black);
+// 			transition: all 0.2s ease;
+// 			&:hover {
+// 				background-color: rgba(0, 0, 0, 0.2);
+// 			}
+// 		}
+// 		&_full-dblue {
+// 			background-color: $dblue;
+// 			border: none;
+// 		}
+// 	}
+// }
+// .abtn_white {
+// 	background-color: $white;
+// 	padding: 8px 20px;
+// 	@include text(30px, 500, $black);
+// 	text-decoration: none;
+// 	box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+// 	transition: 0.2s ease;
+// 	border: none;
+// 	&:hover {
+// 		box-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
+// 	}
+// 	@media screen and (min-width: 700px) {
+// 		@include text(18px, 500, $black);
+// 	}
+// }
+.abtn {
+	box-sizing: border-box;
+	cursor: pointer;
+	padding: 15px 40px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 30px;
+	transition: 0.2s ease;
+	border: none;
+	width: max-content;
+	text-decoration: none;
+	@media screen and (min-width: 700px) {
+		font-size: 18px;
+		padding: 8px 20px;
+	}
+	&:focus {
+		outline: none;
+	}
+	&_fb {
+		background-color: $black;
+		color: $white;
+		&:hover {
+			box-shadow: 0 0 5px #000;
+		}
+	}
+	&_b {
+		background-color: rgba(0, 0, 0, 0);
+		border: 1px solid #000;
+		color: #000;
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+	}
+	&_fw {
+		background-color: #fff;
+		color: #000;
+		&:hover {
+			box-shadow: 0 0 5px #fff;
+		}
+	}
+	&_w {
+		background-color: rgba(0, 0, 0, 0);
+		border: 1px solid #fff;
+		color: #fff;
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
+.a_white {
+	@include text(30px, 400, $white);
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+	@media screen and (min-width: 700px) {
+		@include text(18px, 400, $white);
+	}
+}
+.form {
+	padding: 55px 42px 35px 42px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 17px 4px 40px rgba(143, 143, 143, 0.45);
+	height: fit-content;
+	text-align: center;
+	margin-bottom: 60px;
+	@media screen and (min-width: 700px) {
+		padding: 16px 14px 14px;
+		margin-bottom: 0;
+		min-width: 270px;
+	}
+	@media screen and (min-width: 830px) {
+		padding: 16px 30px 20px;
+		min-width: 300px;
+	}
+	h3 {
+		@include text(24px, 600, $black);
+		margin-bottom: 50px;
+		@media screen and (min-width: 700px) {
+			margin-top: 0;
+			font-size: 18px;
+			margin-bottom: 35px;
+		}
+	}
+	input {
+		height: 70px;
+		border: 1px solid;
+		border-color: #a9a9a9;
+		border-radius: 2px;
+		margin-bottom: 13px;
+		outline: none;
+		@include text(24px, 300, #000);
+		padding-left: 10px;
+		@media screen and (min-width: 700px) {
+			height: 35px;
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+		@media screen and (min-width: 830px) {
+			margin-bottom: 13px;
+		}
+		&::placeholder {
+			@include text(24px, 300, #555555);
+			@media screen and (min-width: 700px) {
+				font-size: 14px;
+			}
+		}
+		&:focus {
+			border-color: #646464;
+		}
+	}
+	button {
+		width: 100%;
+		height: 70px;
+		font-weight: 300;
+		border-radius: 2px;
+		@media screen and (min-width: 700px) {
+			height: initial;
+		}
+	}
+}
+.features-line {
+	height: 3px;
+	width: 100px;
+	margin: 0 auto 20px;
+	background-color: #000;
+	@media screen and (min-width: 700px) {
+		width: 70px;
+	}
+}
+.page__title {
+	align-items: center;
+	margin: 30px 0;
+	display: flex;
+	flex-direction: row;
+
+	@media screen and (min-width: 700px) {
+		margin: 50px 0 30px;
+	}
+	img {
+		width: 33px;
+		height: 33px;
+		margin-right: 10px;
+	}
+	h2 {
+		margin: 0;
+		@include text(24px, 500, #8c8c8c);
+		@media screen and (min-width: 700px) {
+			font-size: 18px;
+		}
+	}
+}
+.page__body {
+	margin-bottom: 30px;
+}

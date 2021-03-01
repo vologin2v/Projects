@@ -1,0 +1,259 @@
+.trs-one {
+	padding: 25px 0 0;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 700px) {
+		margin-bottom: 20px;
+		flex-direction: row;
+	}
+	@media screen and (min-width: 830px) {
+		margin-bottom: 20px;
+	}
+	&__left {
+		margin: 0 auto 30px;
+		text-align: center;
+		@media screen and (min-width: 700px) {
+			margin-bottom: 0;
+		}
+		h1 {
+			margin-top: 0;
+			@include text(36px, 700, $black);
+			text-align: center;
+			@media screen and (min-width: 700px) {
+				font-size: 18px;
+			}
+			@media screen and (min-width: 830px) {
+				font-size: 24px;
+			}
+		}
+		img {
+			margin: 0 auto;
+			width: 100%;
+			@media screen and (min-width: 830px) {
+				width: 95%;
+			}
+		}
+	}
+}
+
+.trs-two {
+	@include text(25px, 400, $black);
+	text-align: justify;
+	line-height: 170%;
+	margin-bottom: 50px;
+	@media screen and (min-width: 700px) {
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+	@media screen and (min-width: 830px) {
+		line-height: 27px;
+		margin-bottom: 60px;
+	}
+}
+.trs-features {
+	width: fit-content;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+	@media screen and (min-width: 830px) {
+		margin-bottom: 60px;
+	}
+	&__item {
+		background-size: contain;
+		box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.63);
+		width: 371px;
+		height: 371px;
+		margin-bottom: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		@media screen and (min-width: 700px) {
+			height: 220px;
+			width: 220px;
+			margin-bottom: 0;
+		}
+		@media screen and (min-width: 830px) {
+			height: 250px;
+			width: 250px;
+		}
+		img {
+			width: 120px;
+			@media screen and (min-width: 700px) {
+				width: 66px;
+			}
+			@media screen and (min-width: 830px) {
+				width: 78px;
+			}
+		}
+		h2 {
+			@include text(24px, 700, $white);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 12px;
+			@media screen and (min-width: 700px) {
+				font-size: 18px;
+				margin-bottom: 0;
+			}
+		}
+		p {
+			@include text(18px, 400, $white);
+			max-width: 240px;
+			line-height: 27px;
+			@media screen and (min-width: 700px) {
+				font-size: 12px;
+				line-height: 15px;
+				max-width: 180px;
+			}
+		}
+		&_1 {
+			background-image: url(../img/trs-features-bg-1.jpg);
+		}
+		&_2 {
+			background-image: url(../img/trs-features-bg-2.jpg);
+		}
+		&_3 {
+			background-image: url(../img/trs-features-bg-3.jpg);
+		}
+	}
+}
+.trs-demo {
+	background-image: url(../img/trs-demo-mob.jpg);
+	background-size: cover;
+	background-position: right;
+	padding: 60px 0;
+	@media screen and (min-width: 700px) {
+		padding: 30px 0;
+	}
+	@media screen and (min-width: 830px) {
+		padding: 60px 0;
+	}
+	&__content {
+		@media screen and (min-width: 700px) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	h2 {
+		@include text(36px, 900, $white);
+		margin-bottom: 15px;
+		margin-top: 0;
+		@media screen and (min-width: 700px) {
+			font-size: 24px;
+			margin-bottom: 13px;
+		}
+	}
+	p {
+		@include text(18px, 400, $white);
+		max-width: 455px;
+		margin-bottom: 30px;
+		@media screen and (min-width: 700px) {
+			font-size: 14px;
+			margin-bottom: 0;
+		}
+		@media screen and (min-width: 830px) {
+			max-width: 500px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		@media screen and (min-width: 700px) {
+			flex-direction: column;
+		}
+		a {
+			height: 67px;
+			padding: 13px 20px;
+			margin-right: 20px;
+			@media screen and (min-width: 700px) {
+				padding: 10px 20px;
+				margin-right: 0;
+				height: 40px;
+			}
+		}
+		p {
+			@include text(24px, 400, $white);
+		}
+	}
+}
+.trs-how {
+	padding: 40px 0;
+	text-align: center;
+	box-shadow: 0 10px 40px $black;
+	position: relative;
+	z-index: 2;
+	h2 {
+		@include text(38px, 700, $black);
+		width: 80%;
+		margin: 0 auto 30px;
+		@media screen and (min-width: 700px) {
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+	}
+	&__items {
+		display: flex;
+		flex-direction: column;
+		@media screen and (min-width: 700px) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	&__item {
+		margin-bottom: 3 0px;
+		img {
+			width: 90px;
+			margin-bottom: 20px;
+			@media screen and (min-width: 700px) {
+				width: 66px;
+				margin-bottom: 30px;
+			}
+		}
+		p {
+			@include text(24px, 400, $black);
+			@media screen and (min-width: 700px) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.trs-offer {
+	background-image: url(../img/trs-offer-bg.jpg);
+	padding: 60px 0;
+	p {
+		@include text(24px, 400, $white);
+		margin-bottom: 60px;
+		text-align: center;
+		@media screen and (min-width: 700px) {
+			font-size: 18px;
+			line-height: 27px;
+			margin-bottom: 40px;
+		}
+	}
+	&__row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		@media screen and (min-width: 700px) {
+			max-width: 330px;
+			margin: 0 auto;
+		}
+		h3 {
+			@include text(36px, 500, $white);
+			@media screen and (min-width: 700px) {
+				font-size: 18px;
+			}
+		}
+	}
+}
