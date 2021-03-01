@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet">
+	<title>Владимир Вологин </title>
+</head>
+
+<body>
+	<button class="open__chat" onclick="openChat()">Открыть</button>
+	<header class="header">
+		<a id="scroll-to-2" href="#anchor1" class="scroll__button">Скролл</a> <!-- Скролл пнопка 1 -->
+		<img class="header__logo" src="img/logo.svg" alt="">
+		<div class="header__content">
+			<h1 class="header__title">
+				<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>, <br> добро пожаловать!
+			</h1>
+			<h2 class="header__subtitle">Предлагаю вкратце ознакомиться с тем, чем я занимаюсь. <br>Подберем Вам подходящее
+				предложение и спланируем дальнейшую работу</h2>
+		</div>
+		<!-- Модальное окно -->
+		<div id="modal1" class="modal">
+			<div class="modal__left">
+				<h2 class="modal__title">Внимание!</h2>
+				<p class="modal__text">
+					Для Вашего удобства включена<br>
+					функция совместного управления<br>
+					данной страницей<br></p>
+				<button id="modal1-close" class="modal__button button">Понятно</button>
+			</div>
+			<img src="img/modal-img.svg" alt="">
+		</div>
+	</header>
+
+	<section id="anchor1" class="features ">
+		<!-- Скролл прием 1 -->
+		<button id="scroll-to-3" href="#anchor2" class="scroll__button">SCroll</button> <!-- Скролл кнопка 2 -->
+		<div class="features__body content">
+			<div class="sity">
+				<div data-wow-delay="1.5s" class="fadeIn wow sity__item sity__item_position_rst">
+					<div class="sity__dot sity__dot_position_b"></div>
+					<p class="sity__name">3 в Ростове</p>
+				</div>
+				<div data-wow-delay="1.55s" class="fadeIn wow  sity__item sity__item_position_vlg">
+					<div class="sity__dot sity__dot_position_b"></div>
+					<p class="sity__name">1 в Волгограде</p>
+				</div>
+				<div data-wow-delay="1.6s" class="fadeIn wow sity__item sity__item_position_msk">
+					<p class="sity__name">2 в Мосвке</p>
+				</div>
+				<div data-wow-delay="1.65s" class="fadeIn wow sity__item sity__item_position_nvg">
+					<div class="sity__dot sity__dot_position_b"></div>
+					<p class="sity__name">3 в Н-Новгороде</p>
+				</div>
+				<div data-wow-delay="1.7s" class="fadeIn wow sity__item sity__item_position_ekb">
+					<div class="sity__dot sity__dot_position_b"></div>
+					<p class="sity__name">2 в Екатеринбурге</p>
+				</div>
+				<div data-wow-delay="1.75s" class="fadeIn wow sity__item sity__item_position_chb">
+					<div class="sity__dot sity__dot_position_l"></div>
+					<p class="sity__name">3 в Челябинске</p>
+				</div>
+				<div data-wow-delay="1.8s" class="fadeIn wow sity__item sity__item_position_tmk">
+					<div class="sity__dot sity__dot_position_b"></div>
+					<p class="sity__name">2 в Томске</p>
+				</div>
+				<div data-wow-delay="1.85s" class="fadeIn wow sity__item sity__item_position_nsk">
+					<div class="sity__dot sity__dot_position_b"></div>
+					<p class="sity__name">5 в Новосибирске</p>
+				</div>
+				<div data-wow-delay="1.9s" class="fadeIn wow sity__item sity__item_position_kem">
+					<div class="sity__dot sity__dot_position_l"></div>
+					<p class="sity__name">2 в Кемерово</p>
+				</div>
+				<div data-wow-delay="2s" class="fadeIn wow sity__item sity__item_position_irk">
+					<div class="sity__dot sity__dot_position_r"></div>
+					<p class="sity__name">3 в Иркутске</p>
+				</div>
+				<div data-wow-delay="2.05s" class="fadeIn wow sity__item sity__item_position_ptk">
+					<div class="sity__dot sity__dot_position_r"></div>
+					<p class="sity__name">1 в Петропавловске-К</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="section-3" class="content review ">
+		<div class="review__line"></div>
+		<img src="img/mockup.jpg" alt="" class="review__img">
+		<div class="review__add-block">
+			<h2 class="review__title title">Моя <br>последняя <br>работа</h2>
+			<div class="review__text-block">
+				<div id="anchor2" class="hide-scroll"></div> <!-- Скролл прием 2 -->
+				<h3 class="review__name">Мария</h3>
+				<p class="review__text">Обращаюсь уже 2й раз за услугами данной компании. Качество <br> за предоставляемые
+					услуги
+					высокое,по срокам пунктуальны. Ребята глубоко вникают в процесс, индивидуальный подход на высоте. В будущем по
+					вопросам создания сайта обращюсь опять в данную компанию. спасибо большое</p>
+				<a id="scroll-to-4" href="#anchor3" class="review__hide">отзыв на Авито</a> <!-- Скролл кнопка 3 -->
+			</div>
+		</div>
+	</section>
+
+	<section id="anchor3" class=" content how">
+		<!-- Скролл прием 3 -->
+		<div class="how__wrap">
+			<div class="how__hulf how__hulf_left">
+				<p class="how__hide">в четырех словах</p>
+				<div class="how__item how__item_1">
+					<div class="how__text">
+						<h3>Исследование</h3>
+						<p>Анализ компании и продукта<br>
+							Анализ ЦА и конкурентов<br>
+							Сбор информации
+						</p>
+					</div>
+					<div class="how__thumbnail">
+						<img src="img/how-img-1.svg" alt="">
+						<p>2-4 дня</p>
+					</div>
+
+				</div>
+				<div class="how__item how__item_3">
+					<div class="how__text">
+						<h3>Разработка</h3>
+						<p>Дизайн сайта <br>
+							Программирование<br>
+							Тестирование</p>
+					</div>
+					<div class="how__thumbnail">
+						<img src="img/how-img-3.svg" alt="">
+						<p>7-14 дней</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="how__hulf how__hulf_right">
+				<div class="wow how__line"></div>
+				<h2 class="how__title title">Как это работает?</h2>
+				<div class="how__item how__item_2">
+					<div class="how__thumbnail">
+						<img src="img/how-img-2.svg" alt="">
+						<p>3-10 дней</p>
+					</div>
+					<div class="how__text">
+						<h3>Прототипирование</h3>
+						<p>Семантическое ядро<br>
+							Пользовательский опыт<br>
+							Структура сайта
+						</p>
+					</div>
+
+				</div>
+
+				<div class="how__item how__item_4">
+					<div class="how__thumbnail">
+						<img src="img/how-img-4.svg" alt="">
+						<p>2-5 дней</p>
+					</div>
+					<div class="how__text">
+						<h3>Продвижение</h3>
+						<p>Маркетинговая стратегия <br>
+							Контекстная реклама SEO<br>
+							Аналитика кампании</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <a id="yes" href="#anchor4" class="how__yes button">Да</a> Скролл кнопка 4 -->
+	</section>
+
+	<section id="anchor4" class="content calc ">
+		<!-- Скролл прием 4 -->
+		<div class="calc__wrapper">
+			<div class="calc__wrap">
+				<div class="calc__line line"></div>
+				<div class="calc__body">
+					<div class="row row_calc row_align">
+						<label class="row__label label label">Максимальный бюджет</label>
+						<div class="calc__wrapper">
+							<input type="text" class="mask__input row__input" id="max-budget" placeholder="От 8 000">
+							<button id="ruble" data-name="ruble" class="calc__currency anim btn-currency-one">₽</button>
+							<button id="dollar" data-name="dollar"
+								class="calc__currency anim btn-currency-one buttons__item_active_off">$</button>
+						</div>
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label row_align">Крайний срок</label>
+						<input type="date" min="2020-01-01" max="2021-12-31" class="row__input" id="last-time" value=""
+							placeholder=" ">
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label">Тип сайта</label>
+						<div class="buttons">
+							<button class="anim btn-type buttons__item buttons__item_active_on" data-name="cutaway">Визитка</button>
+							<button class="anim btn-type buttons__item" data-name="landing">Landing Page</button>
+							<button class="anim btn-type buttons__item" data-name="corporate">Корпоративный</button>
+							<button class="anim btn-type buttons__item" data-name="shop">Интернет-магазин</button>
+						</div>
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label row_align">Товары</label>
+						<input type="text" class="mask__input row__input" id="products" value="" placeholder="1000">
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label row_align">Услуги</label>
+						<input type="text" class="mask__input row__input" id="services" value="" placeholder="1000">
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label">Приоритет</label>
+						<div class="buttons">
+							<button class="anim buttons__item btn-priority" data-name="content">Содержание</button>
+							<button class="anim buttons__item btn-priority" data-name="face">Внешний вид</button>
+						</div>
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label">Рынок</label>
+						<div class="buttons buttons_row">
+							<button class="buttons__item btn-market anim" data-name="bb">B2B</button>
+							<button class="buttons__item btn-market anim" data-name="bc">B2C</button>
+						</div>
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label row_align">Средний чек</label>
+						<div class="calc_wrapper">
+							<input type="text" class="mask__input row__input" id="average-check" value="" placeholder="100 000">
+							<button class="calc__currency btn-currency-two anim">₽</button>
+							<button class="calc__currency btn-currency-two anim buttons__item_active_off">$</button>
+						</div>
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label row_align">Заказов в месяц</label>
+						<input type="text" class="mask__input row__input" id="order-per-month" value="" placeholder="100 000">
+					</div>
+					<div class="row row_calc">
+						<label class="row__label label">Продвижение</label>
+						<div class="calc__wrapper">
+							<div class="buttons buttons_row">
+								<button id="promotion-base" class="buttons__item anim btn-promotion-type geo-on"
+									data-name="base">Нужно</button>
+								<!-- <button id="promotion-complex" class="buttons__item anim btn-promotion-type geo-on"
+									data-name="complex">Комплексное</button> -->
+								<button class="buttons__item anim btn-promotion-type geo-off" data-name="needlessly">Не нужно</button>
+							</div>
+							<div id="geo-row" class="buttons buttons_row">
+								<button class="buttons__item anim btn-promotion-geo" data-name="sity">Город</button>
+								<button class="buttons__item anim btn-promotion-geo" data-name="region">Область</button>
+								<button class="buttons__item anim btn-promotion-geo" data-name="country">Страна</button>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="row row_calc">
+						<label class="row__label label">Ведение</label>
+						<div class="buttons buttons_row">
+							<input id="check-conduct-site" class="calc__checkbox btn-conduct" type="checkbox">
+							<label for="check-conduct-site" class="calc__checkbox_label buttons__item anim"
+								data-name="site">Сайт</label>
+							<input disabled id="check-conduct-promotion" class="buttons__item_active_off check-off calc__checkbox"
+								type="checkbox">
+							<label for="check-conduct-promotion"
+								class="buttons__item_active_off check-off calc__checkbox_label buttons__item anim"
+								data-name="promotion">Продвижение</label>
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<a href="#anchor5" id="calc-get" class="button calc__get">Получить предложение</a>
+			<!-- Скролл кнопка 5  -->
+		</div>
+		</div>
+	</section>
+
+	<section id="anchor5" class="content offer section_none">
+		<!-- Скролл прием 5 -->
+		<div class="offer__body ">
+			<div id="item-econom" class="offer__item">
+				<h2 class="offer__title">Эконом</h2>
+				<!-- <h3 class="offer__subtitle">быстрее и проще</h3> -->
+				<p class="offer__feature">Конструктор Tilda<br>
+					Низкая стоимость<br>
+					Быстрый запуск<br>
+					Универсальный дизайн<br>
+				</p>
+				<div class="offer__calc">
+					<h4 id="price-econom" class="offer__price cur-ruble">10 000 - 20 000 Р</h4>
+					<p id="conduct-1" class="offer__conduct cur-ruble">+ ведение: 5 000 Р/мес</p>
+					<p id="days-econom" class="offer__days">От 14 рабочих дней</p>
+					<a id="tariff-econom" href="#anchor6" class="button offer__button">Выбрать</a>
+					<!-- Скролл кнопка 6 -->
+				</div>
+			</div>
+			<div id="item-optimal" class="offer__item">
+				<h2 class="offer__title">Оптимал</h2>
+				<!-- <h3 class="offer__subtitle">золотая середина</h3> -->
+
+				<p class="offer__feature">
+					Уникальный дизайн<br>
+					Гибкое решение<br>
+					Сайт на CMS<br>
+					Валидный код<br>
+					Самостоятельное управление
+					Копирайтинг<br>
+
+				</p>
+
+				<div class="offer__calc">
+					<h4 id="price-optimal" class="offer__price">10 000 - 20 000 Р</h4>
+					<p id="conduct-2" class="offer__conduct">+ ведение: 5 000 Р/мес</p>
+					<p id="days-optimal" class="offer__days">От 14 дней</p>
+					<a id="tariff-optimal" href="#anchor6" class="button offer__button">Выбрать</a>
+					<!-- Скролл кнопка 6 -->
+				</div>
+			</div>
+			<div id="item-premium" class="offer__item">
+				<h2 class="offer__title">Премиум</h2>
+				<!-- <h3 class="offer__subtitle">для ценителей</h3> -->
+				<p class="offer__feature">Авторский стиль<br>
+					Сложный дизайн<br>
+					Типографика<br>
+					Интерактив<br>
+					Эксклюзивные материалы<br>
+					Наполнение контентом<br>
+					Интеграция с CMS<br>
+					Широкое продвижение<br>
+
+				<div class="offer__calc">
+					<h4 id="price-premium" class="offer__price">10 000 - 20 000 Р</h4>
+					<p id="conduct-3" class="offer__conduct">+ ведение: 5 000 Р/мес</p>
+					<p id="days-premium" class="offer__days">От 14 дней</p>
+					<a id="tariff-premium" href="#anchor6" class="button offer__button">Выбрать</a>
+					<!-- Скролл кнопка 6 -->
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section id="anchor6" class="content communication section_none">
+		<!-- Скролл прием 6 -->
+		<div class="communication__wrapper">
+			<div class="communication__wrap">
+				<div class="communication__line line"></div>
+
+				<div class="communication__body">
+
+					<div class="row row_communication">
+						<p class="row__label label">Формат общения</p>
+						<div class="buttons buttons_row">
+							<button data-name="com-format-t" class="buttons__item anim btn-format">На «Ты»</button>
+							<button data-name="com-format-v" class="buttons__item anim btn-format">На «Вы»</button>
+						</div>
+					</div>
+
+					<div class="row row_communication row_align">
+						<p class="row__label label ">Ваш E-mail</p>
+						<input class="row__input row__input_mail" type="text" id="user_email_input">
+					</div>
+
+					<div class="row row_communication">
+						<p class="row__label label">Мессенджер</p>
+						<div class="buttons-block">
+							<div class="buttons buttons_row">
+								<button data-name="com-msg-mail" id="sub-messenger-off" class="buttons__item anim btn-messenger"><img
+										class="buttons__icon" src="img/icons/E-mail_icon.svg" alt="">E-mail</button>
+								<button data-name="com-msg-whatsapp" class="buttons__item anim btn-messenger call-sub-messenger"><img
+										class="buttons__icon" src="img/icons/whatsapp_icon.svg" alt="">WhatsApp</button>
+								<button data-name="com-msg-viber" class="buttons__item anim btn-messenger call-sub-messenger"><img
+										class="buttons__icon" src="img/icons/viber_icon.svg" alt="">Viber</button>
+								<button data-name="com-msg-telegram" class="buttons__item anim btn-messenger call-sub-messenger"><img
+										class="buttons__icon" src="img/icons/telegram_icon.svg" alt="">Telegram</button>
+								<button data-name="com-msg-facebook" class="buttons__item anim btn-messenger call-sub-messenger"><img
+										class="buttons__icon" src="img/icons/facebook_icon.svg" alt="">Facebook</button>
+							</div>
+							<div id="sub-messenger" class="subblock buttons_row row_align">
+								<label id="sub-messenger-label" class="subblock__label label">Ваш WhatsApp номер</label>
+								<input id="sub-messenger-input" type="text" class="subblock__input row__input">
+							</div>
+						</div>
+					</div>
+
+					<div class="row row_communication">
+						<p class="row__label label">Обмен файлами</p>
+						<div class="buttons-block">
+							<div class="buttons buttons_row">
+								<button data-name="com-files-mail" class="buttons__item anim btn-files"><img class="buttons__icon"
+										src="img/icons/E-mail_icon.svg" alt="">E-mail</button>
+								<button data-name="com-files-mcloud" class="buttons__item anim btn-files"><img class="buttons__icon"
+										src="img/icons/mail-cloud_icon.svg" alt="">Майл
+									Облако</button>
+								<button data-name="com-files-yadisk" class="buttons__item anim btn-files"><img class="buttons__icon"
+										src="img/icons/yandex-drive_icon.svg" alt="">Яндекс
+									Диск</button>
+								<button data-name="com-files-gdrive" class="buttons__item anim btn-files"><img class="buttons__icon"
+										src="img/icons/google-drive_icon.svg" alt="">Google
+									Drive</button>
+								<button data-name="com-files-dbox" class="buttons__item anim btn-files"><img class="buttons__icon"
+										src="img/icons/dropbox_icon.svg" alt="">DropBox</button>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="row row_communication">
+						<p class="row__label label">Видео звонки</p>
+						<div class="buttons-block">
+							<div class="buttons buttons_row">
+								<button data-name="com-video-skype" class="buttons__item anim btn-video call-sub-video"><img
+										class="buttons__icon" src="img/icons/skype_icon.svg" alt="">Skype</button>
+								<button data-name="com-video-ghang" class="buttons__item anim btn-video call-sub-video"><img
+										class="buttons__icon" src="img/icons/google-hangouts_icon.svg" alt="">Google
+									Hangouts</button>
+							</div>
+							<div id="sub-video" class="subblock buttons_row row_align">
+								<label id="sub-video-label" class="subblock__label label">Ваш Skype</label>
+								<input id="sub-video-input" type="text" class="subblock__input row__input">
+							</div>
+						</div>
+					</div> -->
+
+					<div class="row row_communication">
+						<p class="row__label label">Оплата</p>
+						<div class="buttons buttons_row">
+							<button data-name="com-pay-doc" class="buttons__item anim btn-payment"><img class="buttons__icon"
+									src="img/icons/doc_icon.svg" alt="">Расчетный
+								счет</button>
+							<button data-name="com-pay-card" class="buttons__item anim btn-payment"><img class="buttons__icon"
+									src="img/icons/card_icon.svg" alt="">Карта
+								банка</button>
+							<button data-name="com-pay-ewallet" class="buttons__item anim btn-payment"><img class="buttons__icon"
+									src="img/icons/e-money_icon.svg" alt="">Электронный
+								кошелек</button>
+							<button data-name="com-pay-crypt" class="buttons__item anim btn-payment"><img class="buttons__icon"
+									src="img/icons/bitcoin_icon.svg" alt="">Криптовалюта</button>
+						</div>
+					</div>
+					<div class="row row_communication">
+						<div></div>
+						<p class="row__warning">*Вводя ваши данные вы соглашаетесь с <span>152-ФЗ «О персональных данных»</span></p>
+					</div>
+					<div class="row row_communication">
+						<div></div>
+						<a id="btn-continue" href="#anchor7" class="button" style="width: 200px;">Продолжить</a>
+						<!-- Скролл кнопка 7 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="anchor7" class="content next section_none">
+		<!-- Скролл прием 7 -->
+		<div class="next__body">
+			<div class="next__left">
+				<div class="next__articles">
+					<p class="next__article"> Нам с Вами необходимо выбрать удобную дату и время, когда мы сможем продолжить нашу
+						беседу. К этой дате будет проведен быстрый анализ рынка и ваших конкурентов.
+						Будет изучен спрос на ваше предложение</p>
+					<p class="next__article">Вы получите информацию о том, что Вам необходимо
+						сделать перед следующей беседой.
+						Рекомендую это сделать за 1-2 рабочих дня до выбранной даты</p>
+				</div>
+
+			</div>
+			<div class="next__right">
+				<h3 class="next__title">Что дальше?</h3>
+
+			</div>
+		</div>
+		<div class="next__body">
+			<div class="next__left_question">
+				<p class="next__question">Когда Вам будет удобно?</p>
+			</div>
+			<!-- ====================== -->
+			<!-- ====================== -->
+			<form class="agreed" enctype="multipart/form-data" method="post" id="form" action="javascript:void(null);"
+				onsubmit="send();">
+				<input id="send-name" type="hidden" name="name" value="<?php echo $utm_term;?>">
+				<input id="send-max-budget" type="hidden" name="send-max-budget" value="">
+				<input id="send-last-time" type="hidden" name="send-last-time" value="">
+				<input id="send-site-type" type="hidden" name="send-site-type" value="">
+				<input id="send-products" type="hidden" name="send-products" value="">
+				<input id="send-services" type="hidden" name="send-services" value="">
+				<input id="send-priority" type="hidden" name="send-priority" value="">
+				<input id="send-market" type="hidden" name="send-market" value="">
+				<input id="send-average-check" type="hidden" name="send-average-check" value="">
+				<input id="send-order-per-month" type="hidden" name="send-order-per-month" value="">
+				<input id="send-promotion-type" type="hidden" name="send-promotion-type" value="">
+				<input id="send-promotion-geo" type="hidden" name="send-promotion-geo" value="">
+				<input id="send-tariff" type="hidden" name="send-tariff" value="">
+				<input id="send-price" type="hidden" name="send-price" value="">
+				<input id="send-duration" type="hidden" name="send-duration" value="">
+				<input id="send-format" type="hidden" name="send-format" value="">
+				<input type="hidden" name="email" value="" id="user_email">
+				<input id="send-messenger" type="hidden" name="send-messenger" value="">
+				<input id="send-files" type="hidden" name="send-files" value="">
+				<input id="send-video" type="hidden" name="send-video" value="">
+				<input id="send-payment" type="hidden" name="send-payment" value="">
+				<input name="date" class="agreed__input" placeholder="Например: 25 декабря в 15:00">
+				<button href="" class="button agreed__button button_fix" type="submit">Договорились!</button>
+				<!-- Скролл кнопка 8 -->
+			</form>
+			<!-- ====================== -->
+			<!-- ====================== -->
+		</div>
+	</section>
+	<section id="anchor8" class="thanks">
+		<!-- Скролл прием 8 -->
+		<div class="thanks__body">
+			<div class="thanks__text">
+				<h2>
+					<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>, <br> благодарю за звонок!
+				</h2>
+				<h3>Откройте почту, Вам письмо</h3>
+			</div>
+			<img class="thanks__logo" src="img/logo.svg" alt="">
+		</div>
+
+	</section>
+
+	<!-- Мобильное модальное окно -->
+	<div class="mobile-modal">
+		<h2>Как Вы сюда <br>
+			попали!?</h2>
+		<p>Эта страница предназначена <br>
+			только для ПК</p>
+	</div>
+
+	<!-- Begin Talk-Me {literal} -->
+	<script type='text/javascript'>
+		(function (d, w, m) {
+			window.supportAPIMethod = m;
+			var s = d.createElement('script');
+			s.type = 'text/javascript'; s.id = 'supportScript'; s.charset = 'utf-8';
+			s.async = true;
+			var id = '8e645fedd916e51f64f6b8119a8cbd46';
+			s.src = 'https://lcab.talk-me.ru/support/support.js?h=' + id;
+			var sc = d.getElementsByTagName('script')[0];
+			w[m] = w[m] || function () { (w[m].q = w[m].q || []).push(arguments); };
+			if (sc) sc.parentNode.insertBefore(s, sc);
+			else d.documentElement.firstChild.appendChild(s);
+		})(document, window, 'TalkMe');
+	</script>
+	<!-- {/literal} End Talk-Me -->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript" language="javascript">
+		function send() {
+			var msg = $('#form').serialize();
+			$.ajax({
+				type: 'POST',
+				url: 'mail.php',
+				data: msg,
+				success: function (data) {
+					$('.thanks').css('display', 'flex');
+					var top = $('#anchor8').offset().top;
+					$('body,html').animate({ scrollTop: top }, 500);
+				},
+				error: function (xhr, str) {
+					alert('Возникла ошибка: ' + xhr.responseCode);
+				}
+			});
+
+		}
+
+		$(document).ready(function () {
+			$("#user_email_input").bind("change paste keyup", function () {
+				$('#user_email').val($(this).val());
+			});
+		});
+	</script>
+</body>
+
+</html>
