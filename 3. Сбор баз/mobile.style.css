@@ -1,0 +1,137 @@
+html{font-size:10px;scroll-behavior:smooth}
+body{background-color:#fff}
+a{-webkit-tap-highlight-color:transparent}
+*{outline:none!important}
+@font-face{font-family:'Museo Sans Cyrl 300';src:url(../fonts/MuseoSansCyrl-300.eot);src:url(../fonts/MuseoSansCyrl-300.eot?#iefix) format("embedded-opentype"),url(../fonts/MuseoSansCyrl-300.woff2) format("woff2"),url(../fonts/MuseoSansCyrl-300.woff) format("woff"),url(../fonts/MuseoSansCyrl-300.ttf) format("truetype"),url(../fonts/MuseoSansCyrl-300.svg#MuseoSansCyrl-300) format("svg");font-weight:300;font-style:normal}
+@font-face{font-family:'TT Norms';src:url(../fonts/TTNorms-Regular.eot);src:local('../fonts/TT Norms Regular'),local(TTNorms-Regular),url(../fonts/TTNorms-Regular.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:'TT Norms';src:url(../fonts/TTNorms-Light.eot);src:local('../fonts/TT Norms Light'),local(TTNorms-Light),url(../fonts/TTNorms-Light.woff) format("woff");font-weight:300;font-style:normal}
+.button{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.3rem;width:100%;height:32px;border:none;background:-webkit-gradient(linear,left bottom,left top,from(rgba(255,136,0,0.72)),to(rgba(214,181,88,0.72)));background:-o-linear-gradient(bottom,rgba(255,136,0,0.72),rgba(214,181,88,0.72));background:linear-gradient(to top,rgba(255,136,0,0.72),rgba(214,181,88,0.72));cursor:pointer;-webkit-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}
+.button:hover{background:-webkit-gradient(linear,left bottom,left top,from(rgba(204,109,0,0.72)),to(rgba(202,162,49,0.72)));background:-o-linear-gradient(bottom,rgba(204,109,0,0.72),rgba(202,162,49,0.72));background:linear-gradient(to top,rgba(204,109,0,0.72),rgba(202,162,49,0.72))}
+.button:action{background:-webkit-gradient(linear,left bottom,left top,from(rgba(179,95,0,0.72)),to(rgba(181,145,44,0.72)));background:-o-linear-gradient(bottom,rgba(179,95,0,0.72),rgba(181,145,44,0.72));background:linear-gradient(to top,rgba(179,95,0,0.72),rgba(181,145,44,0.72))}
+.preview-slider{position:relative}
+.slick-dots li button:before{font-size:10px}
+.slick-active{outline:none}
+.arrow-prev{position:absolute;z-index:99;top:40%;left:20rem;width:2rem;height:3rem;-webkit-transform:scaleY(-50%);-ms-transform:scaleY(-50%);transform:scaleY(-50%);border:none;background:url(../img/arrow-prev.svg) center no-repeat;background-size:80%}
+.arrow-next{position:absolute;z-index:99;top:40%;right:20rem;width:2rem;height:3rem;-webkit-transform:scaleY(-50%);-ms-transform:scaleY(-50%);transform:scaleY(-50%);border:none;background:url(../img/arrow-next.svg) center no-repeat;background-size:80%}
+.arrow-prev:hover,.arrow-next:hover{top:39.5%;-webkit-transition:.2s ease;-o-transition:.2s ease;transition:.2s ease}
+@media screen and (max-width: 767px) {
+.arrow-prev,.arrow-next{top:95%}
+.hide-mb{display:none}
+}
+.form{z-index:1;position:absolute;top:0;right:0;width:200px;background-color:#fff;padding:13px;text-align:center;-webkit-box-shadow:0 0 27px rgba(81,57,57,0.2);box-shadow:0 0 27px rgba(81,57,57,0.2)}
+.form h3{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.4rem;margin:0 0 6px}
+.form h4{margin:0 0 3px;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem}
+.form form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.form form input{border:none;border-bottom:1px solid #707070;padding:10px 0;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal}
+.form form input::-webkit-input-placeholder{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem}
+.form form input:-ms-input-placeholder{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem}
+.form form input::-ms-input-placeholder{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem}
+.form form input::-moz-placeholder{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem}
+.form form input::placeholder{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem}
+.form-button{margin:20px auto 0;width:90%}
+.shadow-btn{-webkit-box-shadow:0 8px 23px rgba(255,52,0,0.72);box-shadow:0 8px 23px rgba(255,52,0,0.72)}
+.header{padding:9px 17px 0;margin-bottom:30px;background-color:#fff}
+.header-top{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.header-top-logo{font-family:'TT Norms';font-weight:400;color:#000;font-size:1.5rem;text-decoration:none}
+.header-body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.header-body__left{text-align:center}
+.header-body__left h1{font-family:'TT Norms';font-weight:400;font-size:2.7rem;margin-bottom:10px}
+.header-body__left h1 span{color:#f29b37}
+.header-body__left p{font-family:'TT Norms';font-weight:300;color:#555151;font-size:1rem}
+.header-body__right{margin-top:10px;position:relative}
+.header-body__right img{width:300px}
+.desktop-nav{display:none}
+.black-line{height:1px;width:50px;background-color:#000;margin:0 auto}
+.features{background-color:#fff;padding-bottom:70px;text-align:center}
+.features h2{font-family:'TT Norms';font-weight:400;font-size:1.9rem}
+.features-body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.features-body__item{padding:15px;-webkit-box-shadow:0 3px 9px rgba(0,0,0,0.44);box-shadow:0 3px 9px rgba(0,0,0,0.44);margin:0 auto 15px;width:55vw;min-width:200px}
+.features-body__item h4{font-family:'TT Norms';font-weight:400;font-size:1.2rem}
+.features-body__item p{line-height:17px;text-align:justify;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.1rem;color:#504949}
+.orange-line-min{height:3px;width:50px;background-color:#f29b37;margin:0 auto 30px}
+.price{height:100%;width:100%;background:#48494a url(../img/price-bg-mb.jpg) center center no-repeat;background-size:cover;text-align:center;padding-top:20px}
+.price h2{font-family:'TT Norms';font-weight:400;font-size:1.9rem;color:#fff}
+.price h3{font-family:'TT Norms';font-weight:300;font-size:1.4rem;color:#DBDBDB}
+.price-slider{width:100%}
+.price-button{width:80%;margin:0 auto}
+.PSI-block{border-radius:10px;margin:0 auto;background-color:#fff;width:220px;padding-bottom:16px}
+.PSI-header{border-top-left-radius:10px;border-top-right-radius:10px;padding:5px 0 15px}
+.PSI-header h4{margin:10px 0;font-family:'TT Norms';font-weight:400;font-size:1.8rem}
+.PSI-header p{margin:0;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.4rem;color:#504949}
+.PSI-header p span{font-size:2.6rem;color:#000}
+.PSI-body p{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.3rem;color:#504949;margin:20px 0}
+.PSI-1{background-color:#8796B9}
+.PSI-2{background:-webkit-gradient(linear,left bottom,left top,from(rgba(255,136,0,0.72)),to(rgba(214,181,88,0.72)));background:-o-linear-gradient(bottom,rgba(255,136,0,0.72),rgba(214,181,88,0.72));background:linear-gradient(to top,rgba(255,136,0,0.72),rgba(214,181,88,0.72))}
+.PSI-3{background-color:#F8F4F4}
+.slick-dots{margin:20px 0 30px;position:initial}
+.slick-dots li button:before{font-size:10px;color:#fff;opacity:1}
+.slick-dots li.slick-active button:before{color:#f29b37}
+.preview-dots li button:before{color:#000}
+.how{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);background-color:#EEEDED;text-align:center;padding-top:20px}
+.how h2{font-family:'TT Norms';font-weight:400;font-size:1.9rem}
+.how h3{font-family:'TT Norms';font-weight:300;font-size:1.3rem;color:#555151}
+.how-content-body{display:-ms-grid;display:grid;-ms-grid-columns:1fr 40px 1fr;grid-template-columns:repeat(2,1fr);-ms-grid-rows:100px 50px 100px;grid-template-rows:repeat(2,100px);grid-column-gap:40px;grid-row-gap:50px;grid-template-areas:"hb-1 hb-2" "hb-3 hb-4";padding-bottom:40px}
+.how-content-body__item h3{font-family:'TT Norms';font-weight:400;font-size:1.3rem}
+.how-content-body__item p{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1rem;color:#504949}
+.how-img{width:120px;position:absolute;z-index:-1;top:180px;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
+.how-form{text-align:left;background:#1f1e23 url(../img/how-form-bg.png) 0 0 no-repeat;background-size:cover;padding:40px 17px}
+.how-form__content{position:relative;padding-bottom:3.5rem}
+.how-form__content img{width:26rem}
+#hb-1{-ms-grid-row:1;-ms-grid-column:1;text-align:right;grid-area:hb-1}
+#hb-1 img{position:relative;-webkit-transform:translate(0,-20px);-ms-transform:translate(0,-20px);transform:translate(0,-20px)}
+#hb-2{-ms-grid-row:1;-ms-grid-column:3;text-align:left;grid-area:hb-2}
+#hb-2 img{position:relative;-webkit-transform:translate(0,-20px);-ms-transform:translate(0,-20px);transform:translate(0,-20px)}
+#hb-3{-ms-grid-row:3;-ms-grid-column:1;text-align:right;grid-area:hb-3}
+#hb-3 h3{margin-right:30px;margin-bottom:0}
+#hb-3 p{margin-top:0}
+#hb-3 img{position:relative;-webkit-transform:translate(10px,-100px);-ms-transform:translate(10px,-100px);transform:translate(10px,-100px)}
+#hb-4{-ms-grid-row:3;-ms-grid-column:3;text-align:left;grid-area:hb-4}
+#hb-4 h3{margin-left:30px}
+#hb-4 img{position:relative;-webkit-transform:translate(-10px,-100px);-ms-transform:translate(-10px,-100px);transform:translate(-10px,-100px)}
+.preview{text-align:center;background:#fbfeff url(../img/preview-bg.jpg) 0 0 no-repeat;background-size:cover;padding-top:20px;padding-bottom:40px}
+.preview h2{margin-top:0;font-family:'TT Norms';font-weight:400;font-size:1.9rem}
+.preview-slider{width:100%}
+.preview-slider__item{width:90%;text-align:center}
+.preview-slider__item img{margin:0 auto;width:90%}
+.logic{padding-top:20px;padding-bottom:40px;text-align:center}
+.logic h2{font-family:'TT Norms';font-weight:400;font-size:1.9rem;margin-bottom:25px}
+.logic-body__item img{margin-bottom:-25px}
+.logic-body__item h3{margin:0 0 10px;font-family:'TT Norms';font-weight:400;font-size:1.4rem}
+.logic-body__item p{margin:0 auto;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.1rem;color:#555151;width:120px}
+.contacts{text-align:center;margin-bottom:2rem}
+.contacts-content{position:relative}
+.contacts-img{width:26rem}
+.contacts h2{font-family:'TT Norms';font-weight:400;font-size:1.9rem;margin-bottom:20px}
+.contacts-info{margin-bottom:20px}
+.contacts-info p{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.4rem}
+.contacts-info a{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.4rem;text-decoration:none;color:#000}
+.contacts-form{padding:0 17px;position:absolute;top:15rem;right:2rem}
+.orange-line-large{margin:10px auto 0;width:145px;height:3px;background-color:#f29b37}
+.footer{padding-top:30px;padding-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;text-align:center}
+.footer a{text-decoration:none}
+.politic{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:.9rem;color:#000;text-decoration:underline;margin-bottom:10px}
+.web-crew{font-family:'TT Norms';font-weight:400;color:#000;font-size:1.1rem;text-decoration:none}
+.modal{-webkit-box-sizing:border-box;box-sizing:border-box;position:fixed;z-index:999;top:0;left:0;display:none;overflow:auto;width:100%;height:100%;background-color:rgba(0,0,0,0.41)}
+.modal-window{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);margin:auto;-webkit-animation-name:animatetop;animation-name:animatetop;-webkit-animation-duration:.4s;animation-duration:.4s;background-color:#fff}
+.form-window{width:22rem;height:22rem}
+.form-content{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.thank-window{height:10rem;width:30rem}
+.thank-content{width:100%;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);text-align:center}
+.thank-content h3{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.5rem;color:#000}
+.thank-content p{font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1.5rem;color:#000}
+.close{margin:0 0 1rem;margin-right:10px;text-align:right;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:1rem;color:#757575;-webkit-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease;cursor:pointer}
+.close:hover{color:#b5b5b5}
+.form-mb-static{position:static;margin:0 auto}
+#hamburger{cursor:pointer}
+.mobile-menu{width:20rem;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);position:absolute;left:50%;top:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.mobile-menu ul{padding:0}
+.mobile-menu li{margin-left:0;text-align:center;list-style-type:none;margin-bottom:1rem}
+.mobile-menu li a{margin-bottom:1rem;font-family:'Museo Sans Cyrl 300';font-weight:300;font-style:normal;font-size:2rem;color:#000;text-decoration:none}
+@-webkit-keyframes animatetop {
+from{top:-300px;opacity:0}
+to{top:50%;opacity:1}
+}
+@keyframes animatetop {
+from{top:-300px;opacity:0}
+to{top:50%;opacity:1}
+}

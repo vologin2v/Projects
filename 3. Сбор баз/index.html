@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320px, initial-scale=1.0,  user-scalable=yes">
+	<title>Сбор баз</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+  	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+  	<link rel="stylesheet" type="text/css" href="css/mobile.style.css">
+  	<link rel="stylesheet" type="text/css" href="css/desktop.style.css" media="(min-width: 700px)">
+  	 <link rel="shortcut icon" href="favicon.ico">
+ 	 <link rel="icon" href="favicon.ico">
+ 	 <script src="js/jquery-3.3.1.js"></script>
+ 	 <script src="js/jquery-1.11.0.min.js"></script>
+ 	 <script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script> 
+<script>
+	$(document).ready(function(){
+		$('#hamburger').click(function(){
+			$('#modal-4').show();
+		});
+		$('.mb-menu').click(function(){
+			$('#modal-4').hide();
+		});
+		$('.close').click(function(){
+			$('.modal').hide();
+		});
+		$('.modal-button').click(function(){
+			$('#modal-1').show();
+		});
+		$('.politic').click(function(){
+			$('#modal-3').show();
+		});
+		$(".form-tel").mask("+7(999) 999-9999");
+  		$('.price-slider').slick({
+  			adaptiveHeight:false,
+  			arrows: false,
+  			dots: true,
+  			autoplay: true,
+  			autoplaySpeed: 5000,
+  			responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      },
+
+    },
+    {
+      breakpoint: 10000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: false,
+      },
+      
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  		});
+  		$('.preview-slider').slick({
+  			adaptiveHeight:false,
+  			arrows: true,
+  			prevArrow: '<button class="arrow-prev"></button>',
+        	nextArrow: '<button class="arrow-next"></button>',
+  			dots: true,
+  			autoplay: false,
+  			autoplaySpeed: 5000,
+  			dotsClass: 'preview-dots slick-dots',
+  		});
+  		$(function() {
+		  'use strict';
+		  $('.forma').on('submit', function(e) {
+		    e.preventDefault();
+		    $.ajax({
+		      url: 'send.php',
+		      type: 'POST',
+		      contentType: false,
+		      processData: false,
+		      data: new FormData(this),
+		      success: function(msg) {
+		        console.log(msg);
+		        if (msg == 'ok') {
+		        	$('#modal-1').css('display','none'); 
+		        	$('#modal-2').css('display','block'); 
+
+		           // очистка формы
+		        } else {
+		          alert('Ошибка');
+		        }
+		      }
+		    });
+		  });
+		});
+	});
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55286653, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55286653" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145887882-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145887882-1');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5J5HQDW');</script>
+<!-- End Google Tag Manager -->
+<!--Отслеживание цели GA при клике по кнопке-->
+<script>
+    jq_144('#1btn').click(function() { 
+      //#block-newID a - изменяем ID на ID кнопки
+        gtag('event', 'send', { 'event_category': 'button', 'event_action': 'zayvka' }); 
+      // lead_form - категория ранее созданной цели
+      // action_submit - действие цели
+      // параметры 'send' и 'event' оставляем неизменными
+    });
+</script>
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5J5HQDW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<header class="header">
+		<div class="header-top">
+			<a href="" class="header-top-logo">
+				<img src="img/logo.svg" alt="SborBaz">
+				<span>Sborbaz</span>
+			</a>
+			<nav class="header-top-nav">
+				<ul class="desktop-nav">
+					<li><a href="#features">Преимущества</a></li>
+					<li><a href="#price">Цены</a></li>
+					<li><a href="#contacts">Контакты</a></li>
+					<li><a href="#preview">Примеры баз</a></li>
+				</ul>
+			</nav>
+			<a class="mobile-nav hide-pc" id="hamburger"><img src="img/hamburger.svg" alt=""></a>
+			<a class="header-tel hide-mb" href="tel:+79069293229">+7 (906) 929-32-23</a>
+		</div>
+		<div class="header-body">
+			<div class="header-body__left">
+				<h1>Базы <span>организаций</span><br> с ручной проверкой</h1>
+				<div class="black-line"></div>
+				<p>Для обзвона и email рассылок</p>
+				<p>Актуальная база в формате Excel за 4 часа</p>
+			</div>
+			<div class="header-body__right">
+				<img class="hide-pc" src="img/header-img.png" alt="">
+				<div class="form form-static">
+					<h3>Закажите сбор базы</h3>
+					<h4>Мы свяжемся с Вами в течении 5 минут!</h4>
+					<form class="forma">
+						<input type="text" name="name" placeholder="Ваше имя*" required>
+						<input type="text" name="mail" placeholder="Ваше email">
+						<input class="form-tel" type="tel" name="tel" placeholder="Ваш телефон*">
+						<div class="form-button" >
+							<button id="1btn" onclick="ym(55286653, 'reachGoal', 'lead');return true;" onsubmit="gtag('event', 'zayvka');" class="button shadow-btn" type="submit">Заказать сбор</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="features" class="features">
+		<div class="features-content">
+			<h2>Почему стоит заказать<br class="hide-pc"> у нас?</h2>
+		<div class="orange-line-min"></div>
+		<div class="features-body">
+			<div class="features-body__item">
+				<img src="img/features-img-1.svg" alt="Ручная проверка">
+				<h4>Ручная проверка</h4>
+				<p>Мы не продаем базы без проверки. 
+					Благодаря ручному сбору каждой 
+					организации,  ваш менеджер сможет 
+					дозвониться до каждого номера
+				</p>
+			</div>
+			<div class="features-body__item">
+				<img src="img/features-img-2.svg" alt="Не продаем готовые базы">
+				<h4>Не продаем старые базы</h4>
+				<p>Мы не продаем готовые базы  
+				с неактуальными организациями. 
+				Мы собираем актуальную базу 
+				под запросы наших клиентов
+				</p>
+			</div>
+			<div class="features-body__item">
+				<img src="img/features-img-3.svg" alt="Любая информация">
+				<h4>Любая информация</h4>
+				<p>Количество сотрудников, годовой оборот, выручка,<br> ФИО руководителя, дата регистрации, инн, система налогооблажения и многое другое</p>
+			</div>
+		</div>
+		</div>
+	</section>
+	<section id="price" class="price">
+		<h2>Цены баз данных</h2>
+		<h3>При заказе от 1500 контактов<br class="hide-pc">действуют скидки</h3>
+		<div class="price-slider">
+
+			<div class="price-slider__item">
+				<div class="PSI-block">
+					<div class="PSI-header PSI-1">
+					<h4>Сайты вакансий</h4>
+					<p><span>3</span> рубля за контакт</p>
+				</div>
+				<div class="PSI-body">
+					<p>Сбор с сайтов<br> объявлений</p>
+					<p>Наименование<br> организаций</p>
+					<p>Телефон HR менеджера</p>
+					<p>Сайт и телефон</p>
+					<p>Сфера деятельности</p>
+					<p>Адрес, email</p>
+					<p>Возможно предоставление<br> дополнительных сведений</p>
+					<div class="price-button">
+						<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="button modal-button">Заказать сбор</button>
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="price-slider__item">
+				<div class="PSI-block">
+					<div class="PSI-header PSI-2">
+					<h4>Стандартная</h4>
+					<p><span>3</span> рублей за контакт</p>
+				</div>
+				<div class="PSI-body">
+					<p>Наименование<br> организаций</p>
+					<p>Сайт и телефон</p>
+					<p>Сфера деятельности</p>
+					<p>Адрес, email, соцсети</p>
+					<p>Возможно предоставление<br> дополнительных сведений</p>
+					<div class="price-button">
+						<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="button modal-button">Заказать сбор</button>
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="price-slider__item">
+				<div class="PSI-block">
+					<div class="PSI-header PSI-3">
+					<h4>Индивидуальная</h4>
+					<p><span>4</span> рублей за контакт</p>
+				</div>
+				<div class="PSI-body">
+					<p>Нестандартная информация</p>
+					<p>Сайт, телефон, сфера,<br> адрес, email</p>
+					<p>Количество сотрудников</p>
+					<p>Годовой оборот и выручка</p>
+					<p>Дата регистарции</p>
+					<p>Система налогооблажения</p>
+					<p>Возможно предоставление<br> дополнительных сведений</p>
+					<div class="price-button">
+						<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="button modal-button">Заказать сбор</button>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="how">
+		<div class="how-content">
+			<h2>За что вы платите?</h2>
+			<h3>Как происходит сбор баз</h3>
+		<div class="how-content-body">
+
+			<div id="hb-1" class="how-content-body__item">
+				<h3>Сбор информации</h3>
+				<p class="hide-pc">
+					Наш сотрудник, по вашим<br>
+					параметрам из тз собирает<br>
+					информацию.Вручную<br>
+					проверяет информацию на<br>
+					каждом сайте компании.
+				</p>
+
+				<p class="hide-mb">
+					Наш сотрудник, по вашим критериям<br>
+					собирает информацию из открытых<br>
+					источников. Вручную проветяет<br>
+					информацию на каждом сайте<br>
+					компании.
+				</p>
+				<img class="hide-pc" src="img/how-img-1.svg" alt="">
+			</div>
+
+			<div id="hb-2" class="how-content-body__item">
+				<h3>Проверка номеров</h3>
+				<p class="hide-pc">
+					Проверяем адрес<br>
+					номеров телефонов<br>
+					чтобы оставить нужные.<br>
+					Проверяем каждый<br>
+					номер автодозвоном.
+				</p>
+
+				<p class="hide-mb">
+					Проверяем реигоны номеров<br>
+					телефонов чтобы оставить нужный<br>
+					регион. Проверяем каждый номер<br>
+					автодозвоном чтоыб утрать не <br>
+					действительные номера телефонов.
+				</p>
+				<img class="hide-pc" src="img/how-img-1.svg" alt="Проверка номеров">
+			</div>
+
+			<div id="hb-3" class="how-content-body__item">
+				<h3>Проверка<br class="hide-pc"> актуальности</h3>
+				<p class="hide-pc">
+					Проверяем каждую<br>
+					компанию, чтобы<br>
+					убрать неработающие,<br>
+					оставляем только<br>
+					действующие.
+				</p>
+
+				<p class="hide-mb">
+					Проверяем каждую организацию<br>
+					чтобы утрать неработаюшие,<br>
+					ликвидированные организации.<br>
+					оставляем только действующие.
+				</p>
+				<img class="hide-pc" src="img/how-img-3.svg" alt="Проверка актуальности">
+			</div>
+
+			<div id="hb-4" class="how-content-body__item">
+				<h3>Итог базы</h3>
+				<p class="hide-pc">
+					В итоге, вы получаете<br>
+					полностью проверенную<br>
+					базу в формате excel. База<br>
+					будет содержать только<br>
+					актуальную информацию.
+				</p>
+				<p class="hide-mb">
+					В итоге, вы получаете, полностью<br>
+					проверенную базу в формате excel.<br>
+					База будет содержать только <br>
+					актуальную информацию.
+				</p>
+				<img class="hide-pc" src="img/how-img-4.svg" alt="Итог базы">
+			</div>
+		</div>
+		<img class="how-img hide-pc" src="img/how-img-mb.png" alt="За что вы платите?">
+		<img class="how-img hide-mb" src="img/how-img.png" alt="За что вы платите?">
+		</div>
+		<div class="how-form">
+			<div class="how-form__content">
+				<img src="img/header-img.png" alt="">
+				<div class="form form-static">
+					<h3>Закажите сбор базы</h3>
+					<h4>Мы свяжемся с Вами в течении 5 минут!</h4>
+					<form class="forma">
+						<input type="text" name="name" placeholder="Ваше имя*" required>
+						<input type="text" name="mail" placeholder="Ваше email">
+						<input class="form-tel" type="tel" name="tel" placeholder="Ваше Телефон*" required>
+						<div class="form-button">
+							<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="button shadow-btn">Заказать сбор</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="preview" class="preview">
+		<h2>Посмотрите примеры<br class="hide-pc"> собранных баз</h2>
+		<div class="preview-slider">
+			<div class="preview-slider__item">
+				<h3>База "стандартная"</h3>
+				<img class="table" src="img/1.jpg" alt="">
+				<a class="slider-link hide-mb" href="standart.xlsx" download>Cкачать пример базы в excel<img class="download" src="img/download.svg" alt=""></a>
+			</div>
+			<div class="preview-slider__item">
+				<h3>База "индивидуальная"</h3>
+				<img class="table" src="img/2.jpg" alt="">
+				<a class="slider-link hide-mb" href="individual.xlsx" download>Cкачать пример базы в excel<img class="download" src="img/download.svg" alt=""></a>
+			</div>
+			<div class="preview-slider__item">
+				<h3>База "индивидуальная"</h3>
+				<img class="table" src="img/3.jpg" alt="">
+				<a class="slider-link hide-mb" href="individual.xlsx" download>Cкачать пример базы в excel<img class="download" src="img/download.svg" alt=""></a>
+			</div>
+		</div>
+	</section>
+	<section class="logic">
+		<h2>Как заказать базу?</h2>
+		<div class="logic-body">
+			<div class="logic-line"></div>
+			<div class="logic-body__item">
+				<img src="img/logic-img-1.svg" alt="Заявка">
+				<h3>Заявка</h3>
+				<p>Вы оставляете заявку на нашем сайте или по телефону</p>
+				<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="logic-button hide-mb modal-button">Заказать сбор</button>
+			</div>
+			<div class="logic-body__item">
+				<img src="img/logic-img-2.svg" alt="Уточняем детали">
+				<h3>Уточняем детали</h3>
+				<p>Согласовываем с вами критерии базы, количество организаций</p>
+			</div>
+			<div class="logic-body__item">
+				<img src="img/logic-img-3.svg" alt="Сбор">
+				<h3>Сбор</h3>
+				<p>Наш сотрудник собирает компании по вашим кретериям</p>
+			</div>
+			<div class="logic-body__item">
+				<img src="img/logic-img-4.svg" alt="Оплата">
+				<h3>Оплата</h3>
+				<p>Присылаем вам скрины базы и после оплаты присылаем готовую базу</p>
+			</div>
+		</div>
+		
+	</section>
+	<section id="contacts" class="contacts">
+		<h2>Как с нами связаться</h2>
+		<div class="contacts-content">
+			<div class="contacts-info">	
+			<p>Телефон:</p>
+			<a href="">7 (906) 929-32-29</a>
+			<div class="orange-line-large"></div>
+			<p>Email:</p>
+			<a href="">bazsbor@yandex.ru</a>
+			<div class="orange-line-large"></div>
+		</div>
+			<img class="contacts-img" src="img/header-img.png" alt="">
+			<div class="contacts-form form-static">
+				
+				<div class="form form-static">
+					<h3>Закажите сбор базы</h3>
+					<h4>Мы свяжемся с Вами в течении 5 минут!</h4>
+					<form class="forma">
+						<input type="text" name="name" placeholder="Ваше имя*" required>
+						<input type="text" name="mail" placeholder="Ваше email">
+						<input class="form-tel" type="tel" name="tel" placeholder="Ваш Телефон*" required>
+						<div class="form-button">
+							<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="button shadow-btn">Заказать сбор</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<a  href="/" class="hide-mb">Sborbaz</a>
+		<a class="politic" href="#contacts" >Политика конфиденциальности</a>
+		<a class="web-crew" href="https://createers.tech" target="_blank">Разработка сайта<br>Createers</a>
+	</footer>
+
+	<!-- Модальные окна -->
+<div class="modal" id="modal-1">
+	 <div class="modal-window form-window">
+	 	<div class="form-content">
+	 		
+	 		<div class="form form-mb-static">
+	 			<p class="close cls">закрыть</p>
+					<h3>Закажите сбор базы</h3>
+					<h4>Мы свяжемся с Вами в течении 5 минут!</h4>
+					<form class="forma">
+						<input type="text" name="name" placeholder="Ваше имя*" required>
+						<input type="text" name="mail" placeholder="Ваше email">
+						<input class="form-tel" type="tel" name="tel" placeholder="Ваше Телефон*" required>
+						<div  class="form-button">
+							<button onclick="ym(55286653, 'reachGoal', 'lead');return true;" class="button shadow-btn">Заказать сбор</button>
+						</div>
+					</form>
+				</div>
+	 	</div>
+	 </div>
+</div>
+
+<div class="modal" id="modal-2">
+	<div class="modal-window thank-window">
+	 	
+	 	<div class="thank-content">
+	 		<p class="close">закрыть</p>
+	 		<h3>Спасибо за Вашу заявку!</h3>
+	 		<p>Мы свяжемся с Вами в ближашее время</p>
+	 	</div>
+	 </div>
+	 </div>
+<div id="modal-3" class="modal">
+  <div class="modal-window politic-window">
+<p class="close">закрыть</p>
+      <p>Предоставляя свои персональные данные Покупатель даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:</p>
+
+<p>Регистрации Пользователя на сайте
+Осуществление клиентской поддержки
+Получения Пользователем информации о маркетинговых событиях
+Выполнение Продавцом обязательств перед Покупателем
+Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.
+Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Покупателя такая как:</p>
+
+<p>Фамилия, Имя, Отчество<br>
+Дата рождения<br>
+Контактный телефон<br>
+Адрес электронной почты<br> 
+Почтовый адрес<br>
+Персональные данные Покупателей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.</p>
+
+<p>Продавец обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:</p>
+
+<p>По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ<br>
+Стратегическим партнерам, которые работают с Продавцом для предоставления продуктов и услуг, или тем из них, которые помогают Продавцу реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции. <br>
+Продавец оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.</p>
+    </div>
+  </div>
+<div class="modal" id="modal-4">
+	<div class="modal-window mobile-menu">
+		<p class="close">закрыть</p>
+		<ul class="">
+					<li><a class="mb-menu" href="#features">Преимущества</a></li>
+					<li><a class="mb-menu" href="#price">Цены</a></li>
+					<li><a class="mb-menu" href="#contacts">Контакты</a></li>
+					<li><a class="mb-menu" href="#preview">Примеры баз</a></li>
+		</ul>
+	</div>
+</div>
+
+</body>
+
+<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> --> 
+</html>
