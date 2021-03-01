@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320, initial-scale=1.0,  user-scalable=yes">
+	<title>Anhel Fund</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.style.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/desktop.style.min.css"  media="screen and (min-width: 576px)">
+
+  	<script src="js/jquery-3.3.1.js"></script> 
+	<script src="js/locale.js"></script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55443019, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+	</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55443019" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	<script>
+		$(document).ready(function(){
+			changeLocaleService.loadLocale("ru");
+		$('#form').trigger('reset');
+		$(function() {
+		  'use strict';
+		  $('#form').on('submit', function(e) {
+		    e.preventDefault();
+		    $.ajax({
+		      url: 'send.php',
+		      type: 'POST',
+		      contentType: false,
+		      processData: false,
+		      data: new FormData(this),
+		      success: function(msg) {
+		        console.log(msg);
+		        if (msg == 'ok') {
+		        	$('#modal-1').css('display','none'); 
+		        	$('#modal-2').css('display','block'); 
+
+		           // очистка формы
+		        } else {
+		          alert('Ошибка');
+		        }
+		      }
+		    });
+		  });
+		});$(function() {
+		  'use strict';
+		  $('#modal-form').on('submit', function(e) {
+		    e.preventDefault();
+		    $.ajax({
+		      url: 'send1.php',
+		      type: 'POST',
+		      contentType: false,
+		      processData: false,
+		      data: new FormData(this),
+		      success: function(msg) {
+		        console.log(msg);
+		        if (msg == 'ok') {
+		        	$('#modal-1').css('display','none'); 
+		        	$('#modal-2').css('display','block'); 
+
+		           // очистка формы
+		        } else {
+		          alert('Ошибка');
+		        }
+		      }
+		    });
+		  });
+		});
+		})
+		
+	</script>
+</head>
+<body>
+	<header class="header">
+		<nav class="header-nav">
+			<img class="logo" src="img/logo.png" alt="AnhelFund">
+			<div class="header-nav-content">
+				<div id="ru-btn" class="locale-header-nav-language" onclick="changeLocaleService.changeLocale('ru')">
+					<img src="img/ru.svg" alt="russian">
+				</div>
+				<div id="en-btn" class="locale-header-nav-language" onclick="changeLocaleService.changeLocale('en')">
+					<img src="img/en.svg" alt="english">
+				</div>
+				<a href="tel:+79950100393" class="hide-mb">+7 (995) 010 0793</a>
+				<button class="for-modal locale-header-nav-button hide-mb" onclick="ym(55443019, 'reachGoal', 'success');return true;">Заказать звонок</button>
+			</div>
+		</nav>
+
+		<div class="header-body">
+			<h1 class="locale-header-body-title">Профессиональное управление<br>инвестиционными капиталами,<br>прирост инвестиций от <br class="br"> 15 до 40% в год</h1>
+			<h2 class="locale-header-body-description">Управление инвестиционными<br class="br"> капиталами от 15 000 USD и больше.</h2>
+			<div class="header-body-line">
+				<div class="oficial">
+					<img src="img/orange-square.svg" alt="Официальный партнер brokerfutures.ru">
+					<div class="oficial-line">
+						<p class="locale-header-body-line-link">Официальный партнер</p>
+						<a href="https://brokerfutures.ru" target="_blank"> brokerfutures.ru</a>
+					</div>
+				</div>
+				<div class="header-body-line-button ">
+					<button class="for-modal locale-header-body-line-button empty-button white" onclick="ym(55443019, 'reachGoal', 'success');return true;">Получить консультацию</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="features">
+		<div class="features-person">
+			<img src="img/features-person.png" alt="Руслан Казанович">
+			<div class="features-person_id">
+				<div class="noname-1">
+					<img class="hide-mb" src="img/orange-square.svg" alt="Руслан Казанович">
+				</div>
+				<div class="noname-2">
+					<h2 class="locale-features-name">Руслан Казанович</h2>
+					<p class="locale-features-description">Мастер-трейдер<br> со стажем более 8-ми лет.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="features-content">
+			<div class="features-content_item">
+				<img src="img/triangle-1.svg" alt="Трейдинг для меня не только бизнес, а еще возможности применения моих знаний и работа в удовольствие">
+				<p class="locale-features-item">Трейдинг для меня не только бизнес, а еще возможности применения моих знаний и работа с удовольствием.</p>
+			</div>
+			<div class="features-content_item">
+				<img src="img/triangle-2.svg" alt="Основное направление моей деятельности - это торговля фьючерсами на нефть марки WTI внутри торгового дня на Европейских и Американских рынках. ">
+				<p class="locale-features-item">Основное направление моей деятельности - это торговля фьючерсами на нефть марки WTI внутри торгового дня на Европейских и Американских рынках. </p>
+			</div>
+			<div class="features-content_item">
+				<img src="img/triangle-3.svg" alt="Главной задачей инвестирования и управления капиталами является получение прибыли от торговли фьючерсными контрактами, принимая во внимание  возможные риски, как неотъемлемую часть инвестирования в любой сфере деятельности">
+				<p class="locale-features-item">Главной задачей инвестирования и управления капиталами является получение прибыли от торговли фьючерсными контрактами, принимая во внимание возможные риски.</p>
+			</div>
+		</div>
+	</section>
+	<section class="offer">
+	<h2 class="locale-offer-title">Я предлагаю вам стабильную и отработанную мною систему<br> с низкими рисками</h2>
+
+	<div class="offer-body">
+		<div class="offer-content">
+		<div class="offer-content-widht">
+			<img src="img/metamorphosis-1-mb.svg" alt="Основные задачи" class="hide-pc">
+			<img src="img/metamorphosis.svg" alt="Основные задачи" class="hide-mb" >
+			<h4 id="offer-text-1" class="locale-offer-content-description">Минимизировать <br>	возможные<br class="br"> потери</h4>
+			<h3 id="offer-text-2" class="locale-offer-content-title">Основные <br>задачи</h3>
+			<h4 id="offer-text-3" class="locale-offer-content-description">Получение прибыли</h4>
+		</div>
+	</div>
+
+	<div class="offer-footer">
+		<div class="offer-footer-1">
+			<img src="img/metamorphosis-2.svg" alt="Что требуется от вас">
+		</div>
+
+		<div class="">
+			<p id="offer-text-4" class="locale-offer-footer">Что требуется от вас?</p>
+			<p class="locale-offer-footer">Наличие стартового <br class="br"> капитала и желание <br class="br"> увеличивать прибыль</p>
+		</div>
+	</div>
+	</div>
+</section>
+	<section class="benefit">
+		<h2 class="locale-benefit-title">Что получает инвестор<br class="br"> работая со мной?</h2>
+
+		<div class="benefit-content">
+			<div class="benefit-left">
+				<div class="benefit-fimg">
+					<img src="img/4-rings.svg" alt="Что вы получаете работая со мной?">
+					<div class="benefit-left-features">
+						<p id="benefit-text-1" class="locale-benefit-left-item">Полную открытость управления капиталом.</p>
+						<p id="benefit-text-2" class="locale-benefit-left-item">Доходность<br class="br"> 15-40% в год.</p>
+						<p id="benefit-text-3" class="locale-benefit-left-item">Управление Вашим капиталом на фьючерсных рынках <span class="hide-mb">профессионалом с многолетним стажем.</span></p>
+						<p id="benefit-text-4" class="locale-benefit-left-item">Средства размещаются на Ваших счетах под надежной защитой американского брокера с обязательным страхованием.</p>
+					</div>
+				</div>
+				<div class="benefit-left-button hide-mb">
+					<button class="for-modal locale-benefit-left-button empty-button" onclick="ym(55443019, 'reachGoal', 'success');return true;">Получить консультацию</button>
+				</div>
+			</div>
+
+			<div class="benefit-right">
+				<h3 class="locale-benefit-right-title">Полезные ссылки</h3>
+				<p class="locale-benefit-right-link">Сайт брокера Broker Futures</p>
+				<a href="https://brokerfutures.ru" target="_blank">brokerfutures.ru</a>
+				<p class="locale-benefit-right-link">Ведущие торговые стратегии</p>
+				<a href="https://trade.collective2.com" target="_blank">trade.collective2.com</a>
+			</div>
+
+		</div>
+	</section>
+	<section class="contacts">
+		<h2 class="locale-contacts-title hide-mb">Если Вы располагаете капиталом и хотите его приумножить, инвестировать и <br>получать высокую прибыль, то пожалуйста, звоните или пишите</h2>
+		<div class="contacts-content">
+			<div class="contacts-body">
+				<div class="form">
+					<h3 class="locale-contacts-form-title">Задайте мне вопрос</h3>
+					<h4 class="locale-contacts-form-description">я отвечу в ближайшее время</h4>
+					<form id="form">
+						<label class="locale-contacts-form-label" for="form-tel">Ваш телефон</label>
+						<input id="form-tel" type="tel" name="tel" required>
+						<label class="locale-contacts-form-label" for="form-text">Ваш вопрос</label>
+						<textarea id="form-text" name="text"></textarea> 
+						<button class="locale-contacts-form-button" type="submit" onclick="ym(55443019, 'reachGoal', 'success');return true;">Оставить заявку</button>
+					</form>
+				</div>
+				<img class="hide-mb" src="img/contacts-person.png" alt="Руслан Казанович">
+			</div>
+			<div class="contacts-footer">
+				<div class="contacts-footer-left">
+					<div class="contacts-row">
+						<p class="locale-contacts-footer-tel">Телефон:</p>
+						<a href="tel:+79950100793">+7 (995) 010 0793</a>
+					</div>
+					<div class="contacts-row">
+						<p class="locale-contacts-footer-mail">E-mail:</p>
+						<a href="mailto:978anhel@gmail.com">978anhel@gmail.com</a>
+					</div>
+				</div>
+
+				<div class="contacts-footer-right hide-mb">
+					<div class="contacts-person_id">
+						<div class="noname-1">
+							<img class="hide-mb" src="img/orange-square.svg" alt="Руслан Казанович">
+						</div>
+						<div class="noname-2">
+							<h3 class="locale-contacts-footer-name">Руслан Казанович</h3>
+							<p class="locale-contacts-footer-description">Мастер-трейдер<br> со стажем более 8-ми лет.</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+
+	<section class="risk">
+		<div class="risk-content">
+			<div class="risk-row">
+				<img src="img/arrow.svg" alt="Риски инвестора">
+				<a href="https://www.brokerfutures.ru/index.php?page=riski-investora" class="locale-risk-link" target="_blank">Риски инвестора</a>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<!-- <div class=""></div> -->
+		<a id="policy" class="locale-footer-link">Политика конфиденциальности</a>
+		<a href="https://createers.tech" class="locale-footer-webcrew" target="_blank" onclick="ym(55443019, 'reachGoal', 'Createers');return true;">Разработка <br>сайта Createers</a>
+	</footer>
+
+	<!-- Модальные окна -->
+	<!-- Форма -->
+	<div class="modal" id="modal-1">
+		<div class="modal-window modal-height-1">
+			<span id="close-1" class="close">&times;</span>
+			<div class="modal-content">
+				<h2 class="locale-modal-title">Заполните заявку <br>на консультацию по телефону</h2>
+				<form id="modal-form">
+					<label for="modal-name" class="locale-modal-input">Ваше имя</label>
+					<input id="modal-name" class="modal-form-input" name="name" type="text">
+					<label for="modal-tel" class="locale-modal-input">Ваш телефон</label>
+					<input id="modal-tel" class="modal-form-input" name="tel" type="tel">
+					<button class="modal-form-button locale-modal-button" type="submit" onclick="ym(55443019, 'reachGoal', 'success');return true;">Отправить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-2">
+	<div class="modal-window modal-height-2">
+		<span id="close-2" class="close">&times;</span>
+		<div class="modal-content">
+			<h2 class="locale-modal2-title"> Спасибо за заявку!</h2>
+			<p class="locale-modal2-description">Я свяжусь с вами в ближайшее время</p>
+		</div>
+	</div>
+	</div>
+	<div id="modal-3" class="modal">
+  <div class="modal-3-window">
+	<span  id="close-3" class="close">&times;</span>
+      <div class="modal-3-content">
+      	<p>Предоставляя свои персональные данные Покупатель даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:</p>
+
+<p>Регистрации Пользователя на сайте
+Осуществление клиентской поддержки
+Получения Пользователем информации о маркетинговых событиях
+Выполнение Продавцом обязательств перед Покупателем
+Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.
+Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Покупателя такая как:</p>
+
+<p>Фамилия, Имя, Отчество<br>
+Дата рождения<br>
+Контактный телефон<br>
+Адрес электронной почты<br>	
+Почтовый адрес<br>
+Персональные данные Покупателей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.</p>
+
+<p>Продавец обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:</p>
+
+<p>По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ<br>
+Стратегическим партнерам, которые работают с Продавцом для предоставления продуктов и услуг, или тем из них, которые помогают Продавцу реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции. <br>
+Продавец оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.</p>
+      </div>
+    </div>
+  </div> 
+  <script src="js/jquery.maskedinput.min.js"></script> 
+	<script> 
+	 
+		$(document).ready(function(){
+			$("#form-tel, #modal-tel").mask("+7(999) 999-9999");
+			$('#close-1').click(function(){
+				$('#modal-1').hide();
+			});
+			$('#close-2').click(function(){
+				$('#modal-2').hide();
+			});
+			$('#close-3').click(function(){
+				$('#modal-3').hide();
+			});
+			$('.for-modal').click(function(){
+				$('#modal-1').show();
+			})
+			$('#policy').click(function(){
+				$('#modal-3').show();
+			})			
+		})
+		/*Работа Формы*/
+	</script>
+</body>
+ 
+
+</html>
