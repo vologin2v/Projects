@@ -1,0 +1,1744 @@
+html {
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: none;
+}
+* {
+	outline: none !important;
+}
+/* Подключение шрифтов */
+@font-face {
+	font-family: "Segoe UI";
+	font-weight: normal;
+	font-style: normal;
+	src: url("../Fonts/SegoeUI.eot");
+	src: url("../Fonts/SegoeUI.eot?#iefix") format("embedded-opentype"), url("../Fonts/SegoeUI.woff2") format("woff2"),
+		url("../Fonts/SegoeUI.woff") format("woff"), url("../Fonts/SegoeUI.ttf") format("truetype"),
+		url("../Fonts/SegoeUI.svg#SegoeUI") format("svg");
+}
+@font-face {
+	font-family: "Poiret One";
+	src: url("../Fonts/PoiretOne-Regular.eot");
+	src: url("../Fonts/PoiretOne-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../Fonts/PoiretOne-Regular.woff2") format("woff2"), url("../Fonts/PoiretOne-Regular.woff") format("woff"),
+		url("../Fonts/PoiretOne-Regular.ttf") format("truetype"),
+		url("../Fonts/PoiretOne-Regular.svg#PoiretOne-Regular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Museo Sans Cyrl 300";
+	src: url("../Fonts/MuseoSansCyrl-300.eot");
+	src: url("../Fonts/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"),
+		url("../Fonts/MuseoSansCyrl-300.woff2") format("woff2"), url("../Fonts/MuseoSansCyrl-300.woff") format("woff"),
+		url("../Fonts/MuseoSansCyrl-300.ttf") format("truetype"),
+		url("../Fonts/MuseoSansCyrl-300.svg#MuseoSansCyrl-500") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.beausans {
+	font-family: "PF BeauSans Pro XThin";
+}
+/* Анимация второго экрана */
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	11.11% {
+		opacity: 1;
+	}
+	33.33% {
+		opacity: 1;
+	}
+	44.44% {
+		opacity: 0;
+	}
+	66.66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fadein {
+	position: relative;
+	width: 70%;
+}
+#project-frame-1 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-1 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-1 .image:nth-child(2) {
+	animation-delay: 3s;
+}
+#project-frame-1 .image:nth-child(3) {
+	animation-delay: 6s;
+}
+#project-frame-2 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-2 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-2 .image:nth-child(2) {
+	animation-delay: 4s;
+}
+#project-frame-2 .image:nth-child(3) {
+	animation-delay: 8s;
+}
+#project-frame-3 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 14s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-3 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-3 .image:nth-child(2) {
+	animation-delay: 5s;
+}
+#project-frame-3 .image:nth-child(3) {
+	animation-delay: 9s;
+}
+#project-frame-4 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-4 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-4 .image:nth-child(2) {
+	animation-delay: 3s;
+}
+#project-frame-4 .image:nth-child(3) {
+	animation-delay: 6s;
+}
+#project-frame-5 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-5 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-5 .image:nth-child(2) {
+	animation-delay: 5s;
+}
+#project-frame-5 .image:nth-child(3) {
+	animation-delay: 10s;
+}
+#project-frame-6 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-6 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-6 .image:nth-child(2) {
+	animation-delay: 3s;
+}
+#project-frame-6 .image:nth-child(3) {
+	animation-delay: 6s;
+}
+#project-frame-7 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-7 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-7 .image:nth-child(2) {
+	animation-delay: 4s;
+}
+#project-frame-7 .image:nth-child(3) {
+	animation-delay: 8s;
+}
+#project-frame-8 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 14s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-8 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-8 .image:nth-child(2) {
+	animation-delay: 5s;
+}
+#project-frame-8 .image:nth-child(3) {
+	animation-delay: 9s;
+}
+#project-frame-9 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-9 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-9 .image:nth-child(2) {
+	animation-delay: 3s;
+}
+#project-frame-9 .image:nth-child(3) {
+	animation-delay: 6s;
+}
+#project-frame-10 .image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation-name: fade;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#project-frame-10 .image:nth-child(1) {
+	animation-delay: 0s;
+}
+#project-frame-10 .image:nth-child(2) {
+	animation-delay: 5s;
+}
+#project-frame-10 .image:nth-child(3) {
+	animation-delay: 10s;
+}
+#mobile-frame-1 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-1 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-1 .image-mb:nth-child(2) {
+	animation-delay: 3s;
+}
+#mobile-frame-1 .image-mb:nth-child(3) {
+	animation-delay: 6s;
+}
+#mobile-frame-2 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-2 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-2 .image-mb:nth-child(2) {
+	animation-delay: 4s;
+}
+#mobile-frame-2 .image-mb:nth-child(3) {
+	animation-delay: 8s;
+}
+#mobile-frame-3 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 14s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-3 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-3 .image-mb:nth-child(2) {
+	animation-delay: 5s;
+}
+#mobile-frame-3 .image-mb:nth-child(3) {
+	animation-delay: 9s;
+}
+#mobile-frame-4 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-4 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-4 .image-mb:nth-child(2) {
+	animation-delay: 3s;
+}
+#mobile-frame-4 .image-mb:nth-child(3) {
+	animation-delay: 6s;
+}
+#mobile-frame-5 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-5 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-5 .image-mb:nth-child(2) {
+	animation-delay: 3s;
+}
+#mobile-frame-5 .image-mb:nth-child(3) {
+	animation-delay: 6s;
+}
+#mobile-frame-6 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-6 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-6 .image-mb:nth-child(2) {
+	animation-delay: 4s;
+}
+#mobile-frame-6 .image-mb:nth-child(3) {
+	animation-delay: 8s;
+}
+#mobile-frame-7 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 14s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-7 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-7 .image-mb:nth-child(2) {
+	animation-delay: 5s;
+}
+#mobile-frame-7 .image-mb:nth-child(3) {
+	animation-delay: 9s;
+}
+#mobile-frame-8 .image-mb {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 125%;
+	animation-name: fade;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+#mobile-frame-8 .image-mb:nth-child(1) {
+	animation-delay: 0s;
+}
+#mobile-frame-8 .image-mb:nth-child(2) {
+	animation-delay: 3s;
+}
+#mobile-frame-8 .image-mb:nth-child(3) {
+	animation-delay: 6s;
+}
+.fadeon {
+	overflow: hidden;
+	width: 300px;
+}
+.fadein {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.fadein {
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+}
+.fadein:hover {
+	-webkit-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+	-o-transform: scale(1.02);
+}
+/* Header */
+.garant {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: right;
+}
+.garant img {
+	width: 5em;
+	margin-right: 1em;
+}
+.garant h3 {
+	font-family: "Museo Sans Cyrl 300";
+	color: #fff;
+	font-size: 4em;
+	margin: 0 5em 0 0;
+	font-weight: 300;
+}
+.header {
+	font-size: 0.5vw;
+	height: 100vh;
+	padding: 10px 20px 0 20px;
+	background-color: ##171716;
+	background: url(../img/header-bg.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.header-nav {
+	display: flex;
+	flex-direction: row;
+	margin: 3.5em 4em 20vh 4em;
+	justify-content: space-between;
+}
+.header-nav__contacts {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+.header-nav__contacts p {
+	margin-top: 0.5em;
+	color: #fff;
+	font-family: "Museo Sans Cyrl 300";
+	font-weight: 100;
+	font-size: 20px;
+}
+.header-tel {
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 26px;
+	transition: all 0.2s;
+	text-decoration: none;
+	color: #fff;
+}
+.header-tel:hover {
+	color: #b3b3b3;
+}
+.header-tel:active {
+	color: #999999;
+}
+.header-buttons {
+	margin-top: 3em;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	width: 80em;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+.header-button {
+	font-size: 3.5em;
+	font-weight: regular;
+	width: 10.5em;
+	height: 2.7em;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #b3b4b6;
+	border: 2px solid #fff;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: "Museo Sans Cyrl 300";
+}
+.header-button:hover {
+	color: #b3b3b3;
+	border: 2px solid #66676a;
+}
+.header-button:active {
+	color: #808080;
+}
+.header-body .header-title {
+	text-transform: uppercase;
+	line-height: 1.5em;
+	letter-spacing: 0.3em;
+	text-align: center;
+	font-family: "Poiret One";
+	font-size: 7em;
+	font-weight: 100;
+	margin-bottom: 40px;
+	color: #fff;
+}
+.header-body-features {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 80px;
+	margin-left: 117px;
+}
+.header-body-features__item {
+	display: flex;
+	flex-direction: row;
+	margin-right: 20px;
+	align-items: center;
+}
+.header-body-features__item img {
+	height: 70px;
+}
+.header-body-features__item h2 {
+	font-size: 36px;
+	font-weight: 100;
+	color: #b3b4b6;
+	font-family: "Georgia";
+}
+.header-img {
+	position: absolute;
+	top: 250px;
+	right: 130px;
+	float: right;
+	width: 850px;
+}
+.logo img {
+	width: 45em;
+}
+.fa-phone {
+	font-size: 19px;
+	transform: rotate(135grad) translateY(4px);
+}
+#section1 .fp-bg {
+	background-image: url("../img/header-bg.jpg");
+	background-size: cover;
+	background-position: center 80%;
+}
+/* Выполненные проекты */
+.project {
+	background-color: #000;
+}
+.project-body {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1.5fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	/* grid-column-gap: 15px; */
+	grid-template-areas: "p-img-1 p-img-2 p-img-3" "p-img-1 p-img-4 p-img-5" /*         'p-more p-more p-more'; */;
+}
+.project-body__item {
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+}
+.project-body__item img {
+	width: 100%;
+	height: 100%;
+}
+.more-block {
+	font-size: 0.5vw;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 10em;
+	background-color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+	justify-content: center;
+	align-items: center;
+}
+.more-block a {
+	font-size: 5em;
+	font-weight: 300;
+	cursor: pointer;
+	transition: all 0.2s;
+	text-decoration: none;
+	color: #fff;
+	font-family: "Museo Sans Cyrl 300";
+}
+.more-block a:hover {
+	color: #b3b3b3;
+}
+.more-block a:active {
+	color: #808080;
+}
+#p-img-1 {
+	grid-area: p-img-1;
+}
+#p-img-2 {
+	grid-area: p-img-2;
+}
+#p-img-3 {
+	grid-area: p-img-3;
+}
+#p-img-4 {
+	grid-area: p-img-4;
+}
+#p-img-5 {
+	grid-area: p-img-5;
+}
+.black-line {
+	width: 210px;
+	height: 3px;
+	margin: 0 auto 70px auto;
+	background-color: #000;
+}
+.reload {
+	width: 50px;
+	color: #fff;
+}
+.hide {
+	display: none;
+}
+/* Больше проектов */
+.more-project-body {
+	display: grid;
+	height: 100vh;
+	background-color: #000;
+	grid-template-columns: 1fr 1fr 1.5fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "p-img-6 p-img-7 p-img-10" "p-img-8 p-img-9 p-img-10";
+}
+#p-img-6 {
+	grid-area: p-img-6;
+}
+#p-img-7 {
+	grid-area: p-img-7;
+}
+#p-img-8 {
+	grid-area: p-img-8;
+}
+#p-img-9 {
+	grid-area: p-img-9;
+}
+#p-img-10 {
+	grid-area: p-img-10;
+}
+/* Перегородки */
+.septum {
+	/*  background: url(../img/septum-bg.jpg) no-repeat center top fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size:cover;background-size:cover;
+ */
+	font-size: 0.5vw;
+	display: grid;
+	height: 100vh;
+	background-color: #1b2a31;
+	/* background: #fff url(../img/septum-bg.jpg) 0 0 no-repeat; */
+	background-size: cover;
+	grid-template-columns: repeat(2, 1fr);
+}
+.septum-item-right {
+	padding-top: 3em;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.septum-item-right h2 {
+	font-size: 5.5em;
+	text-align: center;
+	color: #fff;
+	font-family: "Museo Sans Cyrl 300";
+}
+.septum-item-right__body {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+}
+#septum {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.septum-1 {
+	background: url(../img/septum-bg.1.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.septum-2 {
+	background: url(../img/septum-bg.2.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.septum-3 {
+	background: url(../img/septum-bg.3.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.black-button {
+	font-size: 3em;
+	font-weight: 300;
+	width: 100%;
+	height: 3em;
+	margin-bottom: 2em;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: "Museo Sans Cyrl 300";
+}
+.black-button:hover {
+	color: #000;
+	border: none;
+	background-color: #b3b4b6;
+}
+.black-button:active {
+	background-color: #7f8184;
+}
+.black-button-active {
+	color: #000;
+	border: none;
+	background-color: #b3b4b6;
+}
+.white-button {
+	font-size: 3em;
+	width: 100%;
+	height: 3em;
+	margin-bottom: 2em;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #000;
+	border: none;
+	background-color: #b3b4b6;
+	font-family: "Museo Sans Cyrl 300";
+}
+.white-button:hover {
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: rgba(0, 0, 0, 0);
+}
+.white-button:active {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.catalog-white-line {
+	width: 10em;
+	height: 3px;
+	margin: 0 auto;
+	margin-bottom: 15em;
+	background-color: #fff;
+}
+/* Двери */
+.doors {
+	/*          background: url(../img/doors-bg.jpg) no-repeat center top fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size:cover;background-size:cover;
+ */
+	font-size: 0.5vw;
+	display: grid;
+	height: 100vh;
+	background-size: cover;
+	grid-template-columns: repeat(2, 1fr);
+}
+.doors-item-left {
+	padding-top: 20em;
+	background-color: rgba(255, 255, 255, 0.35);
+}
+.doors-item-left h2 {
+	font-size: 5.5em;
+	text-align: center;
+	color: #000;
+	font-family: "Museo Sans Cyrl 300";
+}
+.doors-item-left__body {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+}
+.doors-item-left__body h2 {
+	font-size: 5.5em;
+	text-align: center;
+	color: #000;
+	font-family: "Museo Sans Cyrl 300";
+}
+.small-buttons {
+	display: flex;
+	flex-direction: row;
+	width: 60%;
+	margin: 0 auto;
+	justify-content: space-around;
+}
+#doors {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.doors-1 {
+	background: url(../img/doors-bg-1.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.doors-2 {
+	background: url(../img/doors-bg-2.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.doors-3 {
+	background: url(../img/doors-bg-3.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.doors-button {
+	color: #000;
+	border: 1px solid #000;
+}
+.catalog-black-line {
+	width: 10em;
+	height: 3px;
+	margin: 0 auto;
+	margin-bottom: 17em;
+	background-color: #000;
+}
+.doors-black-button {
+	font-size: 3em;
+	font-weight: 300;
+	width: 2em;
+	height: 0.5em;
+	margin-bottom: 2em;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #000;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-family: "Museo Sans Cyrl 300";
+}
+.doors-black-button:hover {
+	color: #000;
+	border: none;
+	background-color: #b3b4b6;
+}
+.doors-black-button:active {
+	background-color: #999a9d;
+}
+.doors-black-button-active {
+	color: #000;
+	border: none;
+	background-color: #b3b4b6;
+}
+.doors-white-button {
+	font-size: 3em;
+	width: 100%;
+	height: 3em;
+	margin-bottom: 2em;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #000;
+	border: none;
+	background-color: #b3b4b6;
+	font-family: "Museo Sans Cyrl 300";
+}
+.doors-white-button:hover {
+	color: #000;
+	border: 1px solid #000;
+	background-color: rgba(0, 0, 0, 0);
+}
+.doors-white-button:active {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+/* Лестничные перегородки и артиумы */
+.stairs {
+	font-size: 0.5vw;
+	display: grid;
+	height: 100vh;
+	/* background: #fff url(../img/stairs-bg.jpg) 0 0 no-repeat; */
+	background-size: cover;
+	grid-template-columns: repeat(2, 1fr);
+}
+.stairs-right-item {
+	padding-top: 20em;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.stairs-right-item h2 {
+	font-size: 5.5em;
+	font-weight: 100;
+	text-align: center;
+	color: #fff;
+	font-family: "Museo Sans Cyrl 300";
+}
+.stairs-right-item__body {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+}
+.white-shadow {
+	box-shadow: 0 0.2em 0.2em rgba(255, 255, 255, 0.5);
+}
+.stairs-btn {
+	background-color: #b3b4b6;
+}
+.stairs-btn-active {
+	background-color: #66676a;
+}
+#stairs {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.stairs-1 {
+	background: url(../img/stairs-bg-1.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.stairs-2 {
+	background: url(../img/stairs-bg-2.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.stairs-3 {
+	background: url(../img/stairs-bg-3.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.stairs-white-line {
+	width: 10em;
+	height: 3px;
+	margin: 0 auto;
+	margin-bottom: 17em;
+	background-color: #fff;
+}
+/* Другие конструкции */
+.other {
+	font-size: 0.5vw;
+	display: grid;
+	height: 100vh;
+	/* background: #fff url(../img/other-bg.jpg) 0 0 no-repeat; */
+	background-size: contain;
+	grid-template-columns: repeat(2, 1fr);
+}
+.other-left-item {
+	padding-top: 3em;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.other-left-item h2 {
+	font-size: 5.5em;
+	font-weight: 100;
+	text-align: center;
+	color: #fff;
+	font-family: "Museo Sans Cyrl 300";
+}
+.other-left-item__body {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+}
+#other {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.other-1 {
+	background: url(../img/other-bg-1.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.other-2 {
+	background: url(../img/other-bg-2.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.other-3 {
+	background: url(../img/other-bg-3.jpg) no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* Наши контакты */
+.contacts {
+	font-size: 0.5vw;
+	display: grid;
+	height: 100vh;
+	background: #ffffff url(../img/map.jpg) 0 0 no-repeat;
+	background-size: cover;
+	grid-template-columns: 0.7fr 1fr;
+}
+.contacts-left-item {
+	padding-top: 3em;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.contacts-left-item h2 {
+	font-size: 5.5em;
+	font-weight: 100;
+	text-align: center;
+	color: #fff;
+	font-family: "Museo Sans Cyrl 300";
+}
+.contacts-left-item__body {
+	padding: 5em 0 0 10em;
+}
+.contacts-left-item__body h3 {
+	font-size: 3.3em;
+	font-weight: 500;
+	margin-bottom: 0.5em;
+	color: #fff;
+	font-family: "Segoe UI";
+}
+.contacts-left-item__body a {
+	font-size: 3.3em;
+	font-weight: 100;
+	margin-bottom: 0.5em;
+	transition: all 0.2s;
+	text-decoration: none;
+	color: #8a8a8a;
+	font-family: "Segoe UI";
+}
+.contacts-left-item__body a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+.contacts-left-item__body p {
+	font-size: 3.3em;
+	font-weight: 100;
+	margin-top: 0.5em;
+	color: #8a8a8a;
+	font-family: "Segoe UI";
+}
+.contacts-white-line {
+	width: 15em;
+	height: 3px;
+	margin: 0 auto;
+	margin-bottom: 10em;
+	background-color: #fff;
+}
+/* Футер */
+.footer {
+	font-size: 0.5vw;
+	display: flex;
+	flex-direction: row;
+	height: 10vh;
+	padding: 2em;
+	background-color: #0e0e0e;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer__pc {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer-company {
+	font-size: 2.5em;
+	font-weight: 100;
+	transition: all 0.2s;
+	text-decoration: none;
+	color: #707070;
+	font-family: "Segoe UI";
+}
+.footer-company:hover {
+	text-decoration: underline;
+	color: #0a0a0a;
+}
+.footer-company img {
+	width: 15em;
+}
+.footer-link {
+	font-size: 2.5em;
+	font-weight: 100;
+	transition: all 0.2s;
+	text-align: center;
+	color: #707070;
+	font-family: "Segoe UI";
+}
+.footer-link:hover {
+	text-decoration: underline;
+	color: #d6d6d6;
+}
+.web-crew {
+	font-size: 2.5em;
+	font-weight: 100;
+	transition: all 0.2s;
+	text-align: center;
+	text-decoration: none;
+	color: #707070;
+	font-family: "Segoe UI";
+}
+.web-crew:hover {
+	text-decoration: underline;
+	color: #d6d6d6;
+}
+/* Модальные окна */
+#myBtn {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.modal {
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: none;
+	/* Full height */
+	overflow: auto;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Sit on top */
+	padding-top: 5em;
+	/* Location of the box */
+	padding-bottom: 30em;
+	/* Enable scroll if needed */
+	background-color: #000;
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.7);
+	/* Black w/ opacity */
+}
+.modal-content {
+	position: relative;
+	width: 60%;
+	margin: auto;
+	padding: 20px;
+	-webkit-animation-name: animatetop;
+	animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 768px) {
+	.modal-content {
+		width: 75%;
+	}
+}
+@media screen and (max-width: 576px) {
+	.modal-content {
+		width: 95%;
+	}
+}
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+.cls {
+	font-size: 50px;
+	position: absolute;
+	right: 0;
+	/*  transform: translateX(40px) translateY(-53px); */
+	color: #fff;
+}
+.cls:hover {
+	cursor: pointer;
+	color: #d3d3d3;
+}
+.cls:focus {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #d3d3d3;
+}
+.modal-body {
+	padding: 2px 16px;
+}
+.modal-footer {
+	padding: 2px 16px;
+	color: white;
+	background-color: #9c27b0;
+}
+/* Модальное окно: отправить заявку */
+.modal2,
+.modal3 {
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	top: 0;
+	/* padding-top: 150px; Location of the box
+    padding-bottom: 100px; */
+	left: 0;
+	display: none;
+	/* Hidden by default */
+	overflow: auto;
+	/* Enable scroll if needed */
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	background-color: #000000;
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content2 {
+	position: relative;
+	width: 300px;
+	margin: auto;
+	padding: 40px 40px;
+	transform: translateY(25%);
+	-webkit-animation-name: animatetop;
+	animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal-body {
+	display: flex;
+	flex-direction: column;
+}
+.modal-body h2 {
+	margin-bottom: 0;
+	font-family: "Museo Sans Cyrl 300";
+}
+.modal-body p {
+	font-size: 16px;
+	margin-bottom: 40px;
+	font-family: "Museo Sans Cyrl 300";
+}
+.modal-form {
+	display: flex;
+	flex-direction: column;
+}
+.modal-form-input {
+	font-size: 20px;
+	height: 50px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: 0.5px solid rgba(0, 0, 0, 0.5);
+	font-family: "Museo Sans Cyrl 300";
+}
+.modal-form-input::placeholder {
+	font-size: 20px;
+	opacity: 0.31;
+	font-family: "Museo Sans Cyrl 300";
+}
+.modal-form-input::-webkit-input-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+.modal-form-input::-moz-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+.modal-form-input:-moz-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+.modal-form-input:-ms-input-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+.modal-form-input:focus::-webkit-input-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+.modal-form-input:focus::-moz-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+.modal-form-input:focus:-moz-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+.modal-form-input:focus:-ms-input-placeholder {
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+.modal-form-button {
+	height: 50px;
+	color: #fff;
+	border: none;
+	background: linear-gradient(to top, #3e203e, #7b6c6c);
+	box-shadow: 0 3px 7px rgba(156, 2, 2, 0.47);
+	font-family: "Museo Sans Cyrl 300";
+}
+.modal-form-button:hover {
+	background: linear-gradient(to top, #2d172d, #6d6060);
+}
+.modal-form-button:active {
+	background: linear-gradient(to top, #1c0f1c, #605454);
+}
+.cls,
+.cls2,
+.cls3 {
+	font-size: 50px;
+	position: absolute;
+	right: 0;
+	transform: translateX(40px) translateY(-92px);
+	color: #fff;
+}
+.cls2,
+.cls3:hover {
+	cursor: pointer;
+}
+.cls2,
+.cls3:focus {
+	cursor: pointer;
+	text-decoration: none;
+}
+.hide__pc {
+	display: none;
+}
+/* Медиа запросы */
+/* Выполненные проекты */
+@media screen and (max-width: 576px) {
+	.hide__pc {
+		display: block;
+	}
+	.hide__mobile {
+		display: none;
+	}
+	.garant img {
+		width: 15em;
+	}
+	.garant h3 {
+		font-size: 10em;
+		margin-right: 1em;
+	}
+	.header {
+		background: url(../img/photo-mb/m-header-bg.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		position: relative;
+		height: 90vh;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.header-nav__contacts {
+		display: none;
+	}
+	.header-body .header-title {
+		display: none;
+	}
+	.header-body .header-title__mobile {
+		font-size: 16em;
+		font-weight: 100;
+		line-height: 2em;
+		margin-bottom: 40px;
+		text-align: center;
+		letter-spacing: 0;
+		text-transform: uppercase;
+		color: #fff;
+		font-family: "Museo Sans Cyrl 300";
+	}
+	.header-button__mobile {
+		font-size: 20px;
+		line-height: 60px;
+		width: 70%;
+		height: 60px;
+		margin: 0 auto;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		border: 2px solid #fff;
+		background-color: rgba(0, 0, 0, 0);
+		font-family: "Museo Sans Cyrl 300";
+	}
+	.header-button__mobile:active {
+		color: #808080;
+		border: 2px solid #66676a;
+	}
+	.header .button__mobile {
+		position: absolute;
+		bottom: 70px;
+		width: 100%;
+	}
+	.logo img {
+		width: 100em;
+	}
+	#project {
+		display: none;
+	}
+	.project-mobile {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:
+			45vh
+			45vh;
+		grid-template-areas: "pm-img-1 pm-img-2" "pm-img-3 pm-img-4";
+	}
+	#pm-img-1 {
+		grid-area: pm-img-1;
+	}
+	#pm-img-2 {
+		grid-area: pm-img-2;
+	}
+	#pm-img-3 {
+		grid-area: pm-img-3;
+	}
+	#pm-img-4 {
+		grid-area: pm-img-4;
+	}
+	#pm-more {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 10vh;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5);
+		align-items: center;
+	}
+	.project-mobile-more {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:
+			45vh
+			45vh;
+		grid-template-areas: "pm-img-5 pm-img-6" "pm-img-7 pm-img-8";
+	}
+	#pm-img-5 {
+		grid-area: pm-img-5;
+	}
+	#pm-img-6 {
+		grid-area: pm-img-6;
+	}
+	#pm-img-7 {
+		grid-area: pm-img-7;
+	}
+	#pm-img-8 {
+		grid-area: pm-img-8;
+	}
+	.mobile-more-link {
+		font-size: 2em;
+		margin: auto;
+		text-decoration: none;
+		color: #fff;
+		font-family: "Museo Sans Cyrl 300";
+	}
+	.pm-img img {
+		width: 100%;
+		height: 100%;
+	}
+	.pm-img-item {
+		position: relative;
+		overflow: hidden;
+		background-size: cover;
+	}
+	.pm-img-item img {
+		width: 100%;
+		height: 100%;
+	}
+	.septum {
+		height: 91vh;
+		grid-template-columns: 0.2fr 0.8fr;
+	}
+	.septum-item-right h2 {
+		font-size: 11em;
+		margin-top: 2em;
+	}
+	.septum-item-right__body {
+		width: 80%;
+	}
+	.black-button {
+		font-size: 10em;
+	}
+	.white-button {
+		font-size: 10em;
+	}
+	.catalog-white-line {
+		width: 30em;
+		margin-bottom: 30em;
+	}
+	.doors {
+		height: 91vh;
+		grid-template-columns: 0.8fr 0.2fr;
+	}
+	.doors-item-left h2 {
+		font-size: 11em;
+		margin-top: 5em;
+	}
+	.doors-item-left__body {
+		width: 80%;
+	}
+	.catalog-black-line {
+		width: 30em;
+		margin-bottom: 20em;
+	}
+	.doors-black-button {
+		font-size: 10em;
+	}
+	.doors-white-button {
+		font-size: 10em;
+	}
+	.stairs {
+		height: 91vh;
+		grid-template-columns: 0.2fr 0.8fr;
+	}
+	.stairs-right-item h2 {
+		font-size: 15em;
+		margin-top: 5em;
+	}
+	.stairs-right-item__body {
+		width: 80%;
+	}
+	.stairs-white-line {
+		width: 30em;
+		margin-bottom: 20em;
+	}
+	.other {
+		height: 91vh;
+		grid-template-columns: 0.8fr 0.2fr;
+	}
+	.other-left-item h2 {
+		font-size: 11em;
+		margin-top: 2em;
+	}
+	.other-left-item__body {
+		width: 80%;
+	}
+	.contacts {
+		grid-template-columns: 1fr;
+	}
+	.contacts-left-item {
+		text-align: center;
+	}
+	.contacts-left-item h2 {
+		font-size: 11em;
+	}
+	.contacts-left-item__body {
+		padding: 0;
+		text-align: center;
+	}
+	.contacts-left-item__body h3 {
+		font-size: 10em;
+	}
+	.contacts-left-item__body a {
+		font-size: 10em;
+	}
+	.contacts-left-item__body p {
+		font-size: 10em;
+	}
+	.contacts-right-item {
+		display: none;
+	}
+	.contacts-white-line {
+		width: 30em;
+		margin-bottom: 50em;
+	}
+	.footer__mobile {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.footer__mobile-right {
+		text-align: right;
+	}
+	.footer-company-mb img {
+		width: 50%;
+	}
+	.footer-link-mb {
+		font-size: 5em;
+		font-weight: 100;
+		transition: all 0.2s;
+		text-align: center;
+		color: #707070;
+		font-family: "Segoe UI";
+	}
+	.web-crew-mb {
+		font-size: 5em;
+		font-weight: 100;
+		text-align: center;
+		text-decoration: none;
+		color: #707070;
+		font-family: "Segoe UI";
+	}
+	.modal-content2 {
+		width: 100%;
+		padding: 40px 0;
+	}
+	.cls,
+	.cls2,
+	.cls3 {
+		transform: translateX(-20px) translateY(-92px);
+	}
+	.septum-1 {
+		background: url(../img/photo-mb/m-septum-bg-1.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.septum-2 {
+		background: url(../img/photo-mb/m-septum-bg-2.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.septum-3 {
+		background: url(../img/photo-mb/m-septum-bg-3.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.doors-1 {
+		background: url(../img/photo-mb/m-doors-bg-1.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.doors-2 {
+		background: url(../img/photo-mb/m-doors-bg-2.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.doors-3 {
+		background: url(../img/photo-mb/m-doors-bg-3.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.stairs-1 {
+		background: url(../img/photo-mb/m-stairs-bg-1.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.stairs-2 {
+		background: url(../img/photo-mb/m-stairs-bg-2.jpg) no-repeat center top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.stairs-3 {
+		background: url(../img/photo-mb/m-stairs-bg-3.jpg) no-repeat center top fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.other-1 {
+		background: url(../img/photo-mb/m-other-bg-1.jpg) no-repeat center top fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.other-2 {
+		background: url(../img/photo-mb/m-other-bg-2.jpg) no-repeat center top fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.other-3 {
+		background: url(../img/photo-mb/m-other-bg-3.jpg) no-repeat center top fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
